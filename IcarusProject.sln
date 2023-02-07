@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus.App", "IcarusProject\Icarus.App.csproj", "{D6B14037-457B-4EC8-95DE-2D9E3D56317D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus.Application", "Icarus.Application\Icarus.Application.csproj", "{D1B9B0C6-25A0-40C3-9CBA-90C949C8B87C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus.Domain", "Icarus.Domain\Icarus.Domain.csproj", "{BC9783EE-706E-46AE-B27D-BE337DBBF367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus.Infrastructure", "Icarus.Infrastructure\Icarus.Infrastructure.csproj", "{2116080D-4E6D-4A6B-876D-27171C3E842D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus.Persistence", "Icarus.Persistence\Icarus.Persistence.csproj", "{DDCAEB1C-12CB-49E9-86E1-713A27B8A1D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icarus.Presentation", "Icarus.Presentation\Icarus.Presentation.csproj", "{A8C1A707-0B42-4A79-A2B1-5F82DE525D8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6B14037-457B-4EC8-95DE-2D9E3D56317D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B14037-457B-4EC8-95DE-2D9E3D56317D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B14037-457B-4EC8-95DE-2D9E3D56317D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B14037-457B-4EC8-95DE-2D9E3D56317D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B9B0C6-25A0-40C3-9CBA-90C949C8B87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B9B0C6-25A0-40C3-9CBA-90C949C8B87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B9B0C6-25A0-40C3-9CBA-90C949C8B87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B9B0C6-25A0-40C3-9CBA-90C949C8B87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9783EE-706E-46AE-B27D-BE337DBBF367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9783EE-706E-46AE-B27D-BE337DBBF367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9783EE-706E-46AE-B27D-BE337DBBF367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9783EE-706E-46AE-B27D-BE337DBBF367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2116080D-4E6D-4A6B-876D-27171C3E842D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2116080D-4E6D-4A6B-876D-27171C3E842D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2116080D-4E6D-4A6B-876D-27171C3E842D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2116080D-4E6D-4A6B-876D-27171C3E842D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDCAEB1C-12CB-49E9-86E1-713A27B8A1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCAEB1C-12CB-49E9-86E1-713A27B8A1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCAEB1C-12CB-49E9-86E1-713A27B8A1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCAEB1C-12CB-49E9-86E1-713A27B8A1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C1A707-0B42-4A79-A2B1-5F82DE525D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C1A707-0B42-4A79-A2B1-5F82DE525D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C1A707-0B42-4A79-A2B1-5F82DE525D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C1A707-0B42-4A79-A2B1-5F82DE525D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EDC6390-B8DF-4415-A928-DB612C355015}
+	EndGlobalSection
+EndGlobal

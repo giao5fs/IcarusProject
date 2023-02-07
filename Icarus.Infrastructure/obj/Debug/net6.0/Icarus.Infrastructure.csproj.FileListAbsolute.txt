@@ -1,0 +1,12 @@
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\bin\Debug\net6.0\Icarus.Infrastructure.deps.json
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\bin\Debug\net6.0\Icarus.Infrastructure.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\bin\Debug\net6.0\Icarus.Infrastructure.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.AssemblyInfo.cs
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\refint\Icarus.Infrastructure.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\Icarus.Infrastructure.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Infrastructure\obj\Debug\net6.0\ref\Icarus.Infrastructure.dll
