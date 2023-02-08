@@ -23,6 +23,12 @@ builder.Services.AddDbContext<IcarusDbContext>(
     options.EnableSensitiveDataLogging(dbOptions.EnableSensitiveLogging);
 });
 
+
+builder.Services.AddMediatR(Icarus.Application.AssemblyReference.Assembly);
+
+builder.Services.AddControllers()
+    .AddApplicationPart(Icarus.Presentation.AssemblyReference.Assembly);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Icarus.Application\Icarus.Application.csproj" />
     <ProjectReference Include="..\Icarus.Persistence\Icarus.Persistence.csproj" />
+    <ProjectReference Include="..\Icarus.Presentation\Icarus.Presentation.csproj" />
   </ItemGroup>
 
 </Project>

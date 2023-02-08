@@ -1,4 +1,6 @@
-﻿using Icarus.Domain.Primitives;
+﻿using Icarus.Domain.DomainEvents;
+using Icarus.Domain.Primitives;
+using Icarus.Domain.Shared;
 using Icarus.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
@@ -21,6 +23,13 @@ namespace Icarus.Domain.Entity
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public static Member Create(Guid id, string firstName, string lastName, string email) => new(id, firstName, lastName, email);
+        public static Member Create(Guid id, string firstName, string lastName, string email)
+        {
+            var member = new Member(id, firstName, lastName, email);
+
+            member.RaiseDomainEvent(new MemberCreatedDomainEvent(member.Id));
+
+            return member;
+        }
     }
 }

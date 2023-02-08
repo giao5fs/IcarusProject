@@ -18,7 +18,7 @@ namespace Icarus.Application.Members.CreateMember
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<Result> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
         {
             if(!await _memberRepository.IsEmailUniqueAsync(request.Email, cancellationToken))
             {
@@ -35,7 +35,7 @@ namespace Icarus.Application.Members.CreateMember
 
             await _unitOfWork.SaveChangeAsync(cancellationToken);
 
-            return Result.Success();
+            return member.Id;
         }
     }
 }
