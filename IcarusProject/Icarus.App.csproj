@@ -8,13 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Scrutor" Version="4.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Icarus.Application\Icarus.Application.csproj" />
+    <ProjectReference Include="..\Icarus.Infrastructure\Icarus.Infrastructure.csproj" />
     <ProjectReference Include="..\Icarus.Persistence\Icarus.Persistence.csproj" />
     <ProjectReference Include="..\Icarus.Presentation\Icarus.Presentation.csproj" />
   </ItemGroup>

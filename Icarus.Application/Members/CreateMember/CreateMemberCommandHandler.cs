@@ -4,38 +4,37 @@ using Icarus.Domain.Errors;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.Shared;
 
-namespace Icarus.Application.Members.CreateMember
+namespace Icarus.Application.Members.CreateMember;
+
+internal sealed class CreateMemberCommandHandler
+    : ICommandHandler<CreateMemberCommand, Guid>
 {
-    internal sealed class CreateMemberCommandHandler
-        : ICommandHandler<CreateMemberCommand>
+    private readonly IMemberRepository _memberRepository;
+    private readonly IUnitOfWork _unitOfWork;
+
+    public CreateMemberCommandHandler(IMemberRepository memberRepository, IUnitOfWork unitOfWork)
     {
-        private readonly IMemberRepository _memberRepository;
-        private readonly IUnitOfWork _unitOfWork;
+        _memberRepository = memberRepository;
+        _unitOfWork = unitOfWork;
+    }
 
-        public CreateMemberCommandHandler(IMemberRepository memberRepository, IUnitOfWork unitOfWork)
+    public async Task<Result<Guid>> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
+    {
+        if (!await _memberRepository.IsEmailUniqueAsync(request.Email, cancellationToken))
         {
-            _memberRepository = memberRepository;
-            _unitOfWork = unitOfWork;
+            return Result.Failure<Guid>(DomainError.Member.EmailAlreadyInUse);
         }
 
-        public async Task<Result<Guid>> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
-        {
-            if(!await _memberRepository.IsEmailUniqueAsync(request.Email, cancellationToken))
-            {
-                return Result.Failure<Guid>(DomainError.Member.EmailAlreadyInUse);
-            }
+        var member = Member.Create(
+            Guid.NewGuid(),
+            request.Email,
+            request.FirstName,
+            request.LastName);
 
-            var member = Member.Create(
-                Guid.NewGuid(),
-                request.Email,
-                request.FirstName,
-                request.LastName);
+        _memberRepository.Add(member);
 
-            _memberRepository.Add(member);
+        await _unitOfWork.SaveChangeAsync(cancellationToken);
 
-            await _unitOfWork.SaveChangeAsync(cancellationToken);
-
-            return member.Id;
-        }
+        return member.Id;
     }
 }

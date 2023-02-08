@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Icarus.Application.Members.Login
 {
-    public record LoginCommand(string Email) : ICommand
+    public record LoginCommand(string Email) : ICommand<string>
     {
     }
 }

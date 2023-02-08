@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
-namespace Icarus.Application
+namespace Icarus.Application;
+
+public static class AssemblyReference
 {
-    public static class AssemblyReference
-    {
-        public static Assembly Assembly { get; set; }
-    }
+    public static Assembly Assembly => typeof(AssemblyReference).Assembly;
 }
-    

@@ -5,5 +5,5 @@ namespace Icarus.Application.Members.CreateMember
     public record CreateMemberCommand(
         string Email,
         string FirstName,
-        string LastName) : ICommand;
+        string LastName) : ICommand<Guid>;
 }

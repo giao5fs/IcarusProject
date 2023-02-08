@@ -12,8 +12,12 @@ namespace Icarus.Domain.Errors
         public static class Member
         {
             public static readonly Error EmailAlreadyInUse = new Error(
-                "Member.EmailInUse",
+                "Member.EmailAlreadyInUse",
                 "Email already in use");
+
+            public static readonly Error InvalidCredentials = new Error(
+                "Member.InvalidCredentials",
+                "InvalidCredentials");
         }
 
     }

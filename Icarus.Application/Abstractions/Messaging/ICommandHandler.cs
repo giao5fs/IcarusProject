@@ -1,17 +1,16 @@
 ﻿using Icarus.Domain.Shared;
 using MediatR;
 
-namespace Icarus.Application.Abstractions.Messaging
+namespace Icarus.Application.Abstractions.Messaging;
+
+public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>
+    where TCommand : ICommand
 {
-    public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>
-        where TCommand : ICommand
-    {
-    }
-
-    public interface ICommandHandler<TCommand, TResponse>
-        : IRequestHandler<TCommand, Result<TResponse>>
-        where TCommand : ICommand<TResponse>
-    {
-    }
-
 }
+
+public interface ICommandHandler<TCommand, TResponse>
+    : IRequestHandler<TCommand, Result<TResponse>>
+    where TCommand : ICommand<TResponse>
+{
+}
+

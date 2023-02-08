@@ -1,36 +1,17 @@
-using Icarus.Persistence;
-using Microsoft.EntityFrameworkCore;
-using MediatR;
+using Icarus.App.Configuration;
 using Icarus.App.Options;
-using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.ConfigureOptions<DbOptionsSetup>();
+builder.Services
+    .AddInfrastructure()
+    .AddApplication()
+    .AddPresentation();
 
-builder.Services.AddDbContext<IcarusDbContext>(
-    (provider, options) =>
-{
-    var dbOptions = provider.GetService<IOptions<DatabaseOptions>>()!.Value;
-
-    options.UseSqlServer(dbOptions.ConnectionString,
-        action =>
-        {
-            action.EnableRetryOnFailure(dbOptions.MaxRetryCount);
-            action.CommandTimeout(dbOptions.CommandTimeout);
-        });
-    options.EnableDetailedErrors(dbOptions.EnableDetailError);
-    options.EnableSensitiveDataLogging(dbOptions.EnableSensitiveLogging);
-});
-
-
-builder.Services.AddMediatR(Icarus.Application.AssemblyReference.Assembly);
-
-builder.Services.AddControllers()
-    .AddApplicationPart(Icarus.Presentation.AssemblyReference.Assembly);
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.ConfigureOptions<JwtOptionsSetup>();
+//builder.Services.ConfigureOptions<JwtBearerOptionsSetup>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
 
 var app = builder.Build();
 
@@ -41,5 +22,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.Run();

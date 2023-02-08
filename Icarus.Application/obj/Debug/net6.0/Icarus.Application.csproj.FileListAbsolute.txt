@@ -1,5 +1,15 @@
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\bin\Debug\net6.0\Icarus.Application.deps.json
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\bin\Debug\net6.0\Icarus.Application.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\bin\Debug\net6.0\Icarus.Application.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\bin\Debug\net6.0\Icarus.Domain.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\bin\Debug\net6.0\Icarus.Domain.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.csproj.AssemblyReference.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.AssemblyInfoInputs.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.AssemblyInfo.cs
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.csproj.CoreCompileInputs.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.csproj.CopyComplete
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\refint\Icarus.Application.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\Icarus.Application.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application\obj\Debug\net6.0\ref\Icarus.Application.dll
