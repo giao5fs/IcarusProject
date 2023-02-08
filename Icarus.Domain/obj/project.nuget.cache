@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "auD8IH8r6dvWVsC41z4yzFMynSton45pFGCb7nVP3CitErVXOzWdY3Ezl9Qp6sOCx6JCdihY8QmFj5cwVDCPkg==",
+  "dgSpecHash": "RRqOzywYHGc2sc4pcPR4NEFAOsxOQBmv1mJR0TyuFQ7dbsfpyNT1lAffeD5NpwfviUZqoGBCUeXahPbQfCJR7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\giao5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

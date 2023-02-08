@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Icarus.Domain.DomainEvents
 {
-    public sealed record MemberCreateDomainEvent(Guid id, ) : IDomainEvent
+    public sealed record MemberCreateDomainEvent(Guid id) : IDomainEvent
     {
     }
 }

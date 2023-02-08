@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "j6S/5FVphgEISyuP2rASAozsHgfpUuFn8L0VJZ4RkhexVc3tP6WDETtH/QzrVeJ1Lt3eWb1VA2g/Nv08SqCkTA==",
+  "dgSpecHash": "l/DiRwOhairQKulXwS5Z2D28WYYB4RAMvkdCLhamOaHirZyL0eEXX0955bzLMlcoqHSMFci0ngA1SYRyF6vNJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\giao5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.2\\microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",

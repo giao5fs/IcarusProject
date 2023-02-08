@@ -36,12 +36,32 @@ namespace Icarus.Domain.Primitives
                 return false;
             }
 
-            return true;
+            return other.Id == Id;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            return Equals(obj as Entity);
+            if (obj is null)
+            {
+                return false;
+            }
+
+            if (obj.GetType() != GetType())
+            {
+                return false;
+            }
+
+            if (obj is not Entity entity)
+            {
+                return false;
+            }
+
+            return entity.Id == Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode() * 41;
         }
     }
 }

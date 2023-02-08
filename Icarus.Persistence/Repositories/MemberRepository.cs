@@ -22,6 +22,11 @@ namespace Icarus.Persistence.Repositories
             return member;
         }
 
+        public async Task<bool> IsEmailUniqueAsync(string email)
+        {
+            return await _context.Set<Member>().FindAsync(email) is null;
+        }
+
         public void Remove(Member member)
         {
             throw new NotImplementedException();
