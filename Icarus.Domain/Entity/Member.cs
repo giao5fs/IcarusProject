@@ -1,14 +1,15 @@
-﻿using Icarus.Domain.Primitives;
+﻿using Icarus.Domain.DomainEvents;
+using Icarus.Domain.Primitives;
 
 namespace Icarus.Domain.Entity;
 
 public sealed class Member : AggregateRoot, IAuditableEntity
 {
-    public Member(Guid id, string firstName, string lastName, string email) : base(id)
+    public Member(Guid id, string email, string firstName, string lastName) : base(id)
     {
+        Email = email;
         FirstName = firstName;
         LastName = lastName;
-        Email = email;
     }
 
     public string Email { get; set; }
@@ -17,11 +18,11 @@ public sealed class Member : AggregateRoot, IAuditableEntity
     public DateTime CreatedOnUtc { get; set; }
     public DateTime? LastModifiedOnUtc { get; set; }
 
-    public static Member Create(Guid id, string firstName, string lastName, string email)
+    public static Member Create(Guid id, string email, string firstName, string lastName)
     {
-        var member = new Member(id, firstName, lastName, email);
+        var member = new Member(id, email, firstName, lastName);
 
-        //member.RaiseDomainEvent(new MemberCreatedDomainEvent(member.Id));
+        member.RaiseDomainEvent(new MemberCreatedDomainEvent(member.Id));
 
         return member;
     }

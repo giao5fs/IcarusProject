@@ -4,7 +4,7 @@ namespace Icarus.App.Options;
 
 public class DbOptionsSetup : IConfigureOptions<DatabaseOptions>
 {
-    private const string ConfigurationSectionName = "ConfigurationSectionName";
+    private const string ConfigurationSectionName = "DBConfig";
     private readonly IConfiguration _configuration;
 
     public DbOptionsSetup(IConfiguration configuration)

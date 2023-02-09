@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Icarus.Domain.Primitives;
 
-namespace Icarus.Domain.Primitives
+public abstract class AggregateRoot : Entity
 {
-    public abstract class AggregateRoot : Entity
+    List<IDomainEvent> _domainEvents = new();
+    protected AggregateRoot(Guid id) : base(id)
     {
-        //List<IDomainEvent> _domainEvents = new();
-        protected AggregateRoot(Guid id) : base(id)
-        {
-        }
+    }
 
-        //protected void RaiseDomainEvent(IDomainEvent @event)
-        //{
-        //    _domainEvents.Add(@event);
-        //}
+    public IReadOnlyCollection<IDomainEvent> GetDomainEvents() => _domainEvents.ToList();
+
+    public void ClearDomainEvents() => _domainEvents.Clear();
+    protected void RaiseDomainEvent(IDomainEvent @event)
+    {
+        _domainEvents.Add(@event);
     }
 }

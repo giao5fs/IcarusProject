@@ -1,9 +1,10 @@
 ﻿using Icarus.App.Options;
-using Icarus.Persistence.Interceptors;
+using Icarus.Application.Abstractions;
 using Icarus.Persistence;
+using Icarus.Persistence.Interceptors;
 using MediatR;
-using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace Icarus.App.Configuration;
 
@@ -14,29 +15,29 @@ public static class DependencyInjectionExtension
         services.Scan(
             selector => selector.FromAssemblies(
                 Icarus.Infrastructure.AssemblyReference.Assembly,
-                Icarus.Persistence.AssemblyReference.Assembly,
-                Icarus.Domain.AssemblyReference.Assembly)
+                Icarus.Persistence.AssemblyReference.Assembly)
             .AddClasses(false)
             .UsingRegistrationStrategy(Scrutor.RegistrationStrategy.Skip)
             .AsMatchingInterface()
             .WithScopedLifetime());
 
         services.AddSingleton<UpdateAuditableEntitiesInterceptor>();
+        services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
 
-        services.ConfigureOptions<DbOptionsSetup>();
         services.AddDbContext<IcarusDbContext>(
             (provider, options) =>
             {
                 var dbOptions = provider.GetService<IOptions<DatabaseOptions>>()!.Value;
 
                 var auditableInterceptor = provider.GetService<UpdateAuditableEntitiesInterceptor>();
+                var outboxMessageInterceptor = provider.GetService<ConvertDomainEventsToOutboxMessagesInterceptor>();
 
                 options.UseSqlServer(dbOptions.ConnectionString,
                     action =>
                     {
                         action.EnableRetryOnFailure(dbOptions.MaxRetryCount);
                         action.CommandTimeout(dbOptions.CommandTimeout);
-                    }).AddInterceptors(auditableInterceptor!);
+                    }).AddInterceptors(auditableInterceptor!, outboxMessageInterceptor!);
 
                 options.EnableDetailedErrors(dbOptions.EnableDetailError);
                 options.EnableSensitiveDataLogging(dbOptions.EnableSensitiveLogging);
@@ -47,6 +48,7 @@ public static class DependencyInjectionExtension
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         services.AddMediatR(Icarus.Application.AssemblyReference.Assembly);
+        services.AddScoped<IEmailService, EmailService>();
         return services;
     }
 

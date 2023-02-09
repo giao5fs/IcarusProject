@@ -14,13 +14,14 @@ namespace Icarus.Persistence.Repositories
 
         public async Task<Member?> GetByIdAsync(Guid id, CancellationToken cancellation)
         {
-            var member = await _context.Set<Member>().FindAsync(id, cancellation);
+            var member = _context.Set<Member>().FirstOrDefault(x => x.Id == id);
+            await Task.Delay(100);
             return member;
         }
 
-        public async Task<bool> IsEmailUniqueAsync(string email, CancellationToken cancellation = default)
+        public bool IsEmailUniqueAsync(string? email, CancellationToken cancellation = default)
         {
-            return await _context.Set<Member>().FindAsync(email) is null;
+            return !_context.Members.Any(x => x.Email == email);
         }
         public void Add(Member member)
         {

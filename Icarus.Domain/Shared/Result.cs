@@ -48,6 +48,6 @@ public class Result<TValue> : Result
     public TValue Value => IsSuccess ? _value! :
         throw new InvalidOperationException("The value of a failure result can not be accepted");
 
-    public static implicit operator Result<TValue>(TValue? val) => Create(val);
+    public static implicit operator Result<TValue>(TValue? val) => Create(val)!;
 
 }

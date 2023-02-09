@@ -1,4 +1,5 @@
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\bin\Debug\net6.0\Icarus.Persistence.deps.json
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\bin\Debug\net6.0\Icarus.Persistence.runtimeconfig.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\bin\Debug\net6.0\Icarus.Persistence.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\bin\Debug\net6.0\Icarus.Persistence.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\bin\Debug\net6.0\Icarus.Domain.dll
@@ -12,6 +13,5 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persisten
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\obj\Debug\net6.0\Icarus.Persistence.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\obj\Debug\net6.0\refint\Icarus.Persistence.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\obj\Debug\net6.0\Icarus.Persistence.pdb
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\obj\Debug\net6.0\ref\Icarus.Persistence.dll
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\bin\Debug\net6.0\Icarus.Persistence.runtimeconfig.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\obj\Debug\net6.0\Icarus.Persistence.genruntimeconfig.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Persistence\obj\Debug\net6.0\ref\Icarus.Persistence.dll

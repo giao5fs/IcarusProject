@@ -6,55 +6,55 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+namespace Icarus.Presentation.Controllers;
 
-namespace Icarus.Presentation.Controllers
+[Route("api/member")]
+public sealed class MemberController : ApiController
 {
-    public sealed class MemberController : ApiController
+    public MemberController(ISender sender) : base(sender)
     {
-        public MemberController(ISender sender) : base(sender)
+    }
+
+    //[Authorize]
+    [HttpGet("{id:guid}")]
+    public async Task<IActionResult> GetMemberById(Guid id, CancellationToken cancellation)
+    {
+        var query = new GetMemberByIdQuery(id);
+
+        Result<MemberResponse> response = await _sender.Send(query, cancellation);
+
+        return response.IsSuccess ? Ok(response.Value) : NotFound(response.Error);
+    }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> LoginMember(
+        [FromBody] LoginRequest request,
+        CancellationToken cancellationToken)
+    {
+        var command = new LoginCommand(request.Email);
+
+        Result<string> token = await _sender.Send(command, cancellationToken);
+        if (token.IsFailure)
         {
+            return BadRequest(token);
+            //return HandleFailure(token);
         }
 
-        public async Task<IActionResult> LoginMember(
-            [FromBody] LoginRequest request,
-            CancellationToken cancellationToken)
-        {
-            var command = new LoginCommand(request.Email);
+        return Ok(token.Value);
+    }
 
-            Result<string> token = await _sender.Send(command, cancellationToken);
-            if (token.IsFailure)
-            {
-                return BadRequest(token);
-                //return HandleFailure(token);
-            }
+    [HttpPost("register")]
+    public async Task<IActionResult> RegisterMember(
+        [FromBody] RegisterMemberRequest request,
+        CancellationToken cancellationToken)
+    {
+        var command = new CreateMemberCommand(
+            request.Email,
+            request.FirstName,
+            request.LastName);
 
-            return Ok(token.Value);
-        }
+        Result<Guid> result = await _sender.Send(command, cancellationToken);
 
-        [HttpPost]
-        public async Task<IActionResult> RegisterMember(
-            [FromBody] RegisterMemberRequest request,
-            CancellationToken cancellationToken)
-        {
-            var command = new CreateMemberCommand(
-                request.Email,
-                request.FirstName,
-                request.LastName);
-
-            Result<Guid> result = await _sender.Send(command, cancellationToken);
-
-            return result.IsSuccess ? Ok() : BadRequest(result.Error);
-        }
-
-        [Authorize]
-        [HttpGet("{id:guid}")]
-        public async Task<IActionResult> GetMemberById(Guid id, CancellationToken cancellation)
-        {
-            var query = new GetMemberByIdQuery(id);
-
-            Result<MemberResponse> response = await _sender.Send(query, cancellation);
-
-            return response.IsSuccess ? Ok() : NotFound(response.Error);
-        }   
+        return result.IsSuccess ? Ok(result.Value) : BadRequest(result.Error);
     }
 }
