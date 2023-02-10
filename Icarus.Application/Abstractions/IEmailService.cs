@@ -9,6 +9,6 @@ namespace Icarus.Application.Abstractions
 {
     public interface IEmailService
     {
-        public Task<Member> SendCreatedMemberAsync(Member member, CancellationToken cancellation);
+        public Task<Member> SendRegisteredMemberAsync(Member member, CancellationToken cancellation);
     }
 }

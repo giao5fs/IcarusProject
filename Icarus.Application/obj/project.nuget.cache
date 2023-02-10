@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xGS+eVRu5oO5Qgq3GcAlliu35jkzG8Rm60+sgnpY8RXSIVVzN48lcmJQKqwFmb3VNKELEs4NI8uvF/+F/udy1g==",
+  "dgSpecHash": "qCj2yYnY3S4QKkz3eWUplbjh2zygnztmj3Z33WkgNqydG7Gj7oZNIhdLiDYai2RiQWK+h95whSCxvaojPxaKfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\giao5\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
   ],

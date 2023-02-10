@@ -49,7 +49,17 @@ public class Error : IEquatable<Error>
     }
     public bool Equals(Error? other)
     {
-        throw new NotImplementedException();
+        if (other is null)
+        {
+            return false;
+        }
+
+        if (other.GetType() != GetType())
+        {
+            return false;
+        }
+
+        return other.Code == Code;
     }
 
     public override bool Equals(object obj) => Equals(obj as Error);

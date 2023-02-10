@@ -1,21 +1,16 @@
 ﻿using Icarus.Domain.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Icarus.Domain.ValueObjects;
 
-namespace Icarus.Domain.Repositories
+namespace Icarus.Domain.Repositories;
+
+public interface IMemberRepository
 {
-    public interface IMemberRepository
-    {
-        Task<Member?> GetByIdAsync(Guid id, CancellationToken cancellation = default);
+    Task<Member?> GetByIdAsync(Guid id, CancellationToken cancellation = default);
 
-        Task<Member?> GetByEmailAsync(string email, CancellationToken cancellation = default);
-        bool IsEmailUniqueAsync(string email, CancellationToken cancellation = default);
-        void Add(Member member);
+    Task<Member?> GetByEmailAsync(string email, CancellationToken cancellation = default);
+    Task<bool> IsEmailUniqueAsync(string email, CancellationToken cancellation = default);
+    void Add(Member member);
 
-        void Update(Member member);
-        void Remove(Member member);
-    }
+    void Update(Member member);
+    void Remove(Member member);
 }

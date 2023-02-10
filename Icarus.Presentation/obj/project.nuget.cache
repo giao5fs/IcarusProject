@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1BKwtMsWIPaTJ2cuMQlW19jdP89YA9M1ClZCRwSYrDAP1Sfa/yajJ+5l9KP+TCWMtDWKoavUp0eG7H5XUvskVw==",
+  "dgSpecHash": "ZplljBw+nD43fkp1G48gsIpwxYqapAoQU3C3+4KXesUD6Q9knBSdPyPcNI2XCNyCqthEzU2068cnY10uXHfnqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\giao5\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

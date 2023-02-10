@@ -1,6 +1,7 @@
 using Icarus.App.Configuration;
 using Icarus.App.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.Use(async (ctx, next) =>
+{
+    Debug.WriteLine(ctx.Request.Headers);
+    Debug.WriteLine(ctx.User);
+    await next(ctx);
+    Console.WriteLine("End HttpRequest");
+});
 
 app.UseRouting();
 

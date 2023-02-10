@@ -15,4 +15,9 @@
     <ProjectReference Include="..\Icarus.Application\Icarus.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

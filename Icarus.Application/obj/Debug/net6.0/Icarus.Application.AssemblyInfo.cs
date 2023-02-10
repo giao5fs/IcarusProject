@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Icarus.Application.UnitTests")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Icarus.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-﻿using Icarus.Application.Members.CreateMember;
+﻿using Icarus.Application.Members.RegisterMember;
 using Icarus.Application.Members.Login;
 using Icarus.Application.Members.Queries;
 using Icarus.Domain.Shared;
@@ -48,7 +48,7 @@ public sealed class MemberController : ApiController
         [FromBody] RegisterMemberRequest request,
         CancellationToken cancellationToken)
     {
-        var command = new CreateMemberCommand(
+        var command = new RegisterMemberCommand(
             request.Email,
             request.FirstName,
             request.LastName);

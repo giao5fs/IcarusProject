@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Icarus.Infrastructure.Authentication;
 
-namespace Icarus.Infrastructure.Authentication
+public class JwtOptions
 {
-    public class JwtOptions
-    {
-        public string Issuer { get; init; }
-        public string Audience { get; init; }
-        public string SecretKey { get; init; }
-    }
+    public string Issuer { get; init; }
+    public string Audience { get; init; }
+    public string SecretKey { get; init; }
 }

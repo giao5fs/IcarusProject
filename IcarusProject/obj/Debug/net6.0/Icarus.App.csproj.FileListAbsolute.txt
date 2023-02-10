@@ -85,3 +85,4 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\ob
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.genruntimeconfig.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\ref\Icarus.App.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\FluentValidation.dll

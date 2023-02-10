@@ -4,12 +4,12 @@ using Icarus.Domain.Repositories;
 using MediatR;
 
 namespace Icarus.Application.Members.Events;
-public class MemberCreatedDomainEventHandler :
+public class MemberRegisteredDomainEventHandler :
     INotificationHandler<MemberCreatedDomainEvent>
 {
     private readonly IEmailService _emailService;
     private readonly IMemberRepository _memberRepository;
-    public MemberCreatedDomainEventHandler(IEmailService emailService, IMemberRepository memberRepository)
+    public MemberRegisteredDomainEventHandler(IEmailService emailService, IMemberRepository memberRepository)
     {
         _emailService = emailService;
         _memberRepository = memberRepository;
@@ -24,6 +24,6 @@ public class MemberCreatedDomainEventHandler :
             return;
         }
 
-        await _emailService.SendCreatedMemberAsync(member, cancellationToken);
+        await _emailService.SendRegisteredMemberAsync(member, cancellationToken);
     }
 }

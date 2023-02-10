@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Icarus.Domain.Repositories;
 
-namespace Icarus.Domain.Repositories
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        Task SaveChangeAsync(CancellationToken cancellation = default);
-    }
+    Task SaveChangeAsync(CancellationToken cancellation = default);
 }
