@@ -10,6 +10,7 @@ public sealed class Member : AggregateRoot, IAuditableEntity
         Email = email;
         FirstName = firstName;
         LastName = lastName;
+        CreatedOnUtc = DateTime.UtcNow;
     }
 
     public string Email { get; set; }
@@ -22,7 +23,7 @@ public sealed class Member : AggregateRoot, IAuditableEntity
     {
         var member = new Member(id, email, firstName, lastName);
 
-        member.RaiseDomainEvent(new MemberCreatedDomainEvent(member.Id));
+        member.RaiseDomainEvent(new MemberRegisteredDomainEvent(member.Id));
 
         return member;
     }

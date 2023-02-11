@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\IcarusProject\\Icarus.App.csproj": {}
+    "D:\\Works\\2023\\IcarusProject\\IcarusProject\\Icarus.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
+    "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj",
+        "projectUniqueName": "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj",
         "projectName": "Icarus.Application",
-        "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj",
-        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\obj\\",
+        "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj",
+        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +29,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj"
               }
             }
           }
@@ -63,8 +60,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -73,24 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj": {
+    "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
+        "projectUniqueName": "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
         "projectName": "Icarus.Domain",
-        "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
-        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\obj\\",
+        "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
+        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,8 +121,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -138,24 +130,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj": {
+    "D:\\Works\\2023\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Works\\2023\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj",
         "projectName": "Icarus.Infrastructure",
-        "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\obj\\",
+        "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,8 +159,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
+              },
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj"
               }
             }
           }
@@ -189,6 +181,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.13, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [
@@ -197,8 +193,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -207,24 +202,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj": {
+    "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj",
+        "projectUniqueName": "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj",
         "projectName": "Icarus.Persistence",
-        "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj",
-        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\obj\\",
+        "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj",
+        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -239,8 +231,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj"
               }
             }
           }
@@ -284,8 +276,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -294,24 +285,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj": {
+    "D:\\Works\\2023\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj",
+        "projectUniqueName": "D:\\Works\\2023\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj",
         "projectName": "Icarus.Presentation",
-        "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj",
-        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\obj\\",
+        "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj",
+        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Presentation\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -326,8 +314,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
               }
             }
           }
@@ -357,8 +345,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -367,24 +354,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\IcarusProject\\Icarus.App.csproj": {
+    "D:\\Works\\2023\\IcarusProject\\IcarusProject\\Icarus.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\IcarusProject\\Icarus.App.csproj",
+        "projectUniqueName": "D:\\Works\\2023\\IcarusProject\\IcarusProject\\Icarus.App.csproj",
         "projectName": "Icarus.App",
-        "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\IcarusProject\\Icarus.App.csproj",
-        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\IcarusProject\\obj\\",
+        "projectPath": "D:\\Works\\2023\\IcarusProject\\IcarusProject\\Icarus.App.csproj",
+        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\2023\\IcarusProject\\IcarusProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -399,17 +383,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
               },
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj"
               },
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Persistence\\Icarus.Persistence.csproj"
               },
-              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj": {
-                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj"
+              "D:\\Works\\2023\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj": {
+                "projectPath": "D:\\Works\\2023\\IcarusProject\\Icarus.Presentation\\Icarus.Presentation.csproj"
               }
             }
           }
@@ -452,6 +436,10 @@
               "target": "Package",
               "version": "[6.0.13, )"
             },
+            "Quartz.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
             "Scrutor": {
               "target": "Package",
               "version": "[4.2.1, )"
@@ -467,8 +455,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -480,7 +467,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

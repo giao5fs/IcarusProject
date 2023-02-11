@@ -10,3 +10,14 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Domain\ob
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Domain\obj\Debug\net6.0\refint\Icarus.Domain.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Domain\obj\Debug\net6.0\ref\Icarus.Domain.dll
+D:\Works\2023\IcarusProject\Icarus.Domain\bin\Debug\net6.0\Icarus.Domain.deps.json
+D:\Works\2023\IcarusProject\Icarus.Domain\bin\Debug\net6.0\Icarus.Domain.dll
+D:\Works\2023\IcarusProject\Icarus.Domain\bin\Debug\net6.0\ref\Icarus.Domain.dll
+D:\Works\2023\IcarusProject\Icarus.Domain\bin\Debug\net6.0\Icarus.Domain.pdb
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.AssemblyInfoInputs.cache
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.AssemblyInfo.cs
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.csproj.CoreCompileInputs.cache
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.dll
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\ref\Icarus.Domain.dll
+D:\Works\2023\IcarusProject\Icarus.Domain\obj\Debug\net6.0\Icarus.Domain.pdb

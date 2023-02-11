@@ -1,21 +1,12 @@
 using Icarus.App.Configuration;
-using Icarus.App.Options;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddInfrastructure()
     .AddApplication()
-    .AddPresentation();
-
-builder.Services.ConfigureOptions<DbOptionsSetup>();
-builder.Services.ConfigureOptions<JwtOptionsSetup>();
-//builder.Services.ConfigureOptions<JwtBearerOptionsSetup>();
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
-
-
+    .AddPresentation()
+    .AddConfigureOptions();
 
 var app = builder.Build();
 
@@ -27,10 +18,9 @@ if (app.Environment.IsDevelopment())
 
 app.Use(async (ctx, next) =>
 {
-    Debug.WriteLine(ctx.Request.Headers);
-    Debug.WriteLine(ctx.User);
+    Console.WriteLine("Before HttpRequest");
     await next(ctx);
-    Console.WriteLine("End HttpRequest");
+    Console.WriteLine("After HttpRequest");
 });
 
 app.UseRouting();

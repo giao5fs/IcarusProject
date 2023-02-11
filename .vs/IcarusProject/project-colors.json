@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a8c1a707-0b42-4a79-a2b1-5f82de525d8e": {
+      "ProjectGuid": "a8c1a707-0b42-4a79-a2b1-5f82de525d8e",
+      "DisplayName": "Icarus.Presentation",
+      "ColorIndex": 0
+    },
+    "d6b14037-457b-4ec8-95de-2d9e3d56317d": {
+      "ProjectGuid": "d6b14037-457b-4ec8-95de-2d9e3d56317d",
+      "DisplayName": "Icarus.App",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "d1b9b0c6-25a0-40c3-9cba-90c949c8b87c": {
+      "ProjectGuid": "d1b9b0c6-25a0-40c3-9cba-90c949c8b87c",
+      "DisplayName": "Icarus.Application",
+      "ColorIndex": 2
+    },
+    "bc9783ee-706e-46ae-b27d-be337dbbf367": {
+      "ProjectGuid": "bc9783ee-706e-46ae-b27d-be337dbbf367",
+      "DisplayName": "Icarus.Domain",
+      "ColorIndex": 3
+    },
+    "ddcaeb1c-12cb-49e9-86e1-713a27b8a1d9": {
+      "ProjectGuid": "ddcaeb1c-12cb-49e9-86e1-713a27b8a1d9",
+      "DisplayName": "Icarus.Persistence",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

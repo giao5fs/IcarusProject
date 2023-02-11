@@ -1,5 +1,6 @@
 ﻿using Icarus.Domain.Entity;
 using Icarus.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Icarus.Persistence.Repositories;
 
@@ -14,15 +15,19 @@ public class MemberRepository : IMemberRepository
 
     public async Task<Member?> GetByIdAsync(Guid id, CancellationToken cancellation)
     {
-        var member = _context.Set<Member>().FirstOrDefault(x => x.Id == id);
-        await Task.Delay(100);
+        var member = await _context.Set<Member>().FirstOrDefaultAsync(x => x.Id == id);
         return member;
     }
 
     public async Task<bool> IsEmailUniqueAsync(string? email, CancellationToken cancellation = default)
     {
-        await Task.Delay(100);
-        return !_context.Members.Any(x => x.Email == email);
+        return !await _context.Members.AnyAsync(x => x.Email == email);
+    }
+
+    public async Task<Member?> GetByEmailAsync(string email, CancellationToken cancellation = default)
+    {
+        var member = await _context.Set<Member>().FirstOrDefaultAsync(x => x.Email == email);
+        return member;
     }
     public void Add(Member member)
     {
@@ -36,12 +41,5 @@ public class MemberRepository : IMemberRepository
     public void Remove(Member member)
     {
         _context.Set<Member>().Remove(member);
-    }
-
-    public async Task<Member?> GetByEmailAsync(string email, CancellationToken cancellation = default)
-    {
-        var member = _context.Set<Member>().FirstOrDefault(x => x.Email == email);
-        await Task.Delay(100);
-        return member;
     }
 }
