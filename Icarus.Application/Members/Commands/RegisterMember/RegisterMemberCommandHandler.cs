@@ -28,16 +28,16 @@ internal sealed class RegisterMemberCommandHandler
         Result<FirstName> firstNameResult = FirstName.Create(request.FirstName);
         Result<LastName> lastNameResult = LastName.Create(request.LastName);
 
-        if (!await _memberRepository.IsEmailUniqueAsync(emailResult.Value.Value, cancellationToken))
+        if (!await _memberRepository.IsEmailUniqueAsync(emailResult.Value, cancellationToken))
         {
             return Result.Failure<Guid>(DomainError.Member.EmailAlreadyInUse);
         }
 
         var member = Member.Create(
             Guid.NewGuid(),
-            emailResult.Value.Value,
-            firstNameResult.Value.Value,
-            lastNameResult.Value.Value);
+            emailResult.Value,
+            firstNameResult.Value,
+            lastNameResult.Value);
 
         _memberRepository.Add(member);
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zJjtCVAAxEgbpqlhHuEhOIRxT5VmfVH3RU+wrbf+bl4QdqsKtyVVy7FsTqEvd00GtLyVX4/sOnhAONqV07Frlw==",
+  "dgSpecHash": "RRqOzywYHGc2sc4pcPR4NEFAOsxOQBmv1mJR0TyuFQ7dbsfpyNT1lAffeD5NpwfviUZqoGBCUeXahPbQfCJR7g==",
   "success": true,
-  "projectFilePath": "D:\\Works\\2023\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
+  "projectFilePath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Domain\\Icarus.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\giaonx\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
-    "C:\\Users\\giaonx\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+    "C:\\Users\\giao5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
   ],
   "logs": []
 }

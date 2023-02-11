@@ -24,7 +24,7 @@ internal sealed class LoginCommandHandler
         //Get member
         Result<Email> email = Email.Create(request.Email);
 
-        Member? member = await _memberRepository.GetByEmailAsync(request.Email);
+        Member? member = await _memberRepository.GetByEmailAsync(email.Value);
 
         if (member is null)
         {

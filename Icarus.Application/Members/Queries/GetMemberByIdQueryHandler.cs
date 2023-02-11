@@ -30,6 +30,6 @@ internal sealed class GetMemberByIdQueryHandler
                     ));
         }
 
-        return new MemberResponse(member.Id,member.Email);
+        return new MemberResponse(member.Id, member.Email.Value);
     }
 }

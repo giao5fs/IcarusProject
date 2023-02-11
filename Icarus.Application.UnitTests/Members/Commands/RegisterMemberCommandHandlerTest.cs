@@ -26,7 +26,9 @@ public class RegisterMemberCommandHandlerTest
         var command = new RegisterMemberCommand("email@test.com", "first", "last");
 
         _memberRepositoryMock.Setup(
-            x => x.IsEmailUniqueAsync("email@test.com", default))
+            x => x.IsEmailUniqueAsync(
+                It.IsAny<Email>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
 
         var handler = new RegisterMemberCommandHandler(
@@ -46,7 +48,9 @@ public class RegisterMemberCommandHandlerTest
         var command = new RegisterMemberCommand("email@test.com", "first", "last");
 
         _memberRepositoryMock.Setup(
-            x => x.IsEmailUniqueAsync("email@test.com", default))
+            x => x.IsEmailUniqueAsync(
+                It.IsAny<Email>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
 
         var handler = new RegisterMemberCommandHandler(
@@ -67,7 +71,9 @@ public class RegisterMemberCommandHandlerTest
         var command = new RegisterMemberCommand("email@test.com", "first", "last");
 
         _memberRepositoryMock.Setup(
-            x => x.IsEmailUniqueAsync("email@test.com", default))
+            x => x.IsEmailUniqueAsync(
+                It.IsAny<Email>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
 
         var handler = new RegisterMemberCommandHandler(
@@ -89,7 +95,9 @@ public class RegisterMemberCommandHandlerTest
         var command = new RegisterMemberCommand("email@test.com", "first", "last");
 
         _memberRepositoryMock.Setup(
-            x => x.IsEmailUniqueAsync("email@test.com", default))
+            x => x.IsEmailUniqueAsync(
+                It.IsAny<Email>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
 
         var handler = new RegisterMemberCommandHandler(

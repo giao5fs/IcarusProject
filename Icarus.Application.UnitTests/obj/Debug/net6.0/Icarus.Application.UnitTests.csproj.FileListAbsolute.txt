@@ -1,4 +1,9 @@
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.csproj.AssemblyReference.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.AssemblyInfoInputs.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.AssemblyInfo.cs
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.csproj.CoreCompileInputs.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\testhost.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\testhost.exe
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -103,11 +108,6 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Applicati
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\Icarus.Domain.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\Icarus.Application.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\bin\Debug\net6.0\Icarus.Domain.pdb
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.csproj.AssemblyReference.cache
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.AssemblyInfoInputs.cache
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.AssemblyInfo.cs
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.csproj.CoreCompileInputs.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.csproj.CopyComplete
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\Icarus.Application.UnitTests.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Application.UnitTests\obj\Debug\net6.0\refint\Icarus.Application.UnitTests.dll

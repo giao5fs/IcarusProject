@@ -1,5 +1,6 @@
 ﻿using Icarus.Domain.Entity;
 using Icarus.Domain.Repositories;
+using Icarus.Domain.ValueObjects;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Icarus.Persistence.Repositories;
@@ -26,7 +27,7 @@ public class CacheMemberRepository : IMemberRepository
             });
     }
 
-    public Task<bool> IsEmailUniqueAsync(string email, CancellationToken cancellation = default)
+    public Task<bool> IsEmailUniqueAsync(Email email, CancellationToken cancellation = default)
     {
         return _memberRepository.IsEmailUniqueAsync(email, cancellation);
     }
@@ -46,7 +47,7 @@ public class CacheMemberRepository : IMemberRepository
         _memberRepository.Add(member);
     }
 
-    public Task<Member?> GetByEmailAsync(string email, CancellationToken cancellation = default)
+    public Task<Member?> GetByEmailAsync(Email email, CancellationToken cancellation = default)
     {
         return _memberRepository.GetByEmailAsync(email, cancellation);
     }
