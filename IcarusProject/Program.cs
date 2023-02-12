@@ -23,6 +23,8 @@ app.Use(async (ctx, next) =>
     Console.WriteLine("After HttpRequest");
 });
 
+app.UseCors("AllowAllOrigins");
+
 app.UseRouting();
 
 app.UseHttpsRedirection();

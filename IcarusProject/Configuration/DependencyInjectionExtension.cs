@@ -107,6 +107,13 @@ public static class DependencyInjectionExtension
         services.AddControllers().AddApplicationPart(Icarus.Presentation.AssemblyReference.Assembly);
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAllOrigins", policy =>
+            {
+                policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+            });
+        });
         return services;
     }
 
