@@ -22,12 +22,12 @@ public class MemberRepository : IMemberRepository
 
     public async Task<bool> IsEmailUniqueAsync(Email email, CancellationToken cancellation = default)
     {
-        return !await _context.Members.AnyAsync(x => x.Email == email, cancellationToken: cancellation);
+        return !await _context.Members.AnyAsync(x => x.Email == email.Value, cancellationToken: cancellation);
     }
 
     public async Task<Member?> GetByEmailAsync(Email email, CancellationToken cancellation = default)
     {
-        var member = await _context.Set<Member>().FirstOrDefaultAsync(x => x.Email == email, cancellationToken: cancellation);
+        var member = await _context.Set<Member>().FirstOrDefaultAsync(x => x.Email == email.Value, cancellationToken: cancellation);
         return member;
     }
     public void Add(Member member)

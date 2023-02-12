@@ -1,5 +1,6 @@
 ﻿using Icarus.App.Options;
 using Icarus.Application.Abstractions;
+using Icarus.Application.Behaviors;
 using Icarus.Domain.Repositories;
 using Icarus.Infrastructure.BackgroundJobs;
 using Icarus.Persistence;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Quartz;
 using Scrutor;
+using FluentValidation;
 
 namespace Icarus.App.Configuration;
 
@@ -51,7 +53,7 @@ public static class DependencyInjectionExtension
                     trigger
                     .ForJob(jobKey)
                     .WithSimpleSchedule(schedule => schedule
-                    .WithIntervalInSeconds(15)
+                    .WithIntervalInSeconds(120)
                     .RepeatForever()));
             configure.UseMicrosoftDependencyInjectionJobFactory();
         });
@@ -90,7 +92,13 @@ public static class DependencyInjectionExtension
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         services.AddMediatR(Icarus.Application.AssemblyReference.Assembly);
+
         services.AddScoped<IEmailService, EmailService>();
+
+        services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
+
+        services.AddValidatorsFromAssembly(Icarus.Application.AssemblyReference.Assembly, includeInternalTypes: true);
+
         return services;
     }
 

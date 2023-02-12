@@ -170,7 +170,6 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bi
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.Persistence.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.Presentation.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.Domain.pdb
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\scopedcss\bundle\Icarus.App.styles.css
@@ -180,3 +179,5 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\ob
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.genruntimeconfig.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\ref\Icarus.App.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.MvcApplicationPartsAssemblyInfo.cs

@@ -176,3 +176,4 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architect
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\obj\Debug\net6.0\Icarus.Architecture.UnitTests.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\obj\Debug\net6.0\Icarus.Architecture.UnitTests.genruntimeconfig.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\obj\Debug\net6.0\ref\Icarus.Architecture.UnitTests.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

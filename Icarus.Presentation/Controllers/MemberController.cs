@@ -55,6 +55,12 @@ public sealed class MemberController : ApiController
 
         Result<Guid> result = await _sender.Send(command, cancellationToken);
 
-        return result.IsSuccess ? Ok(result.Value) : BadRequest(result.Error);
+        if (result.IsFailure)
+        {
+            return HandleFailure(result);
+        }
+        //return result.IsSuccess ? Ok(result.Value) : BadRequest(result.Error);
+
+        return CreatedAtAction(nameof(GetMemberById), new { id = result.Value }, result.Value);
     }
 }

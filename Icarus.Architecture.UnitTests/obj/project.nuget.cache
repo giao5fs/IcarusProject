@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JNIC5x1d6L4FGXbW5H3ekdZKYo1Ub2YkGCc+mpQsGPu7/9HBdGET4ewBBm4fVhiV1Pw4P8bEAQvASEgHVgm6ow==",
+  "dgSpecHash": "wCkfxAhQGsOxrN42Yfc4FCiXWdjC/3V3SDh5JPhSN3DmYNhAoSqxa1dXloBX0UWKDlmsIMUK2NRFuyzJC6C9/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Architecture.UnitTests\\Icarus.Architecture.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giao5\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\fluentassertions\\6.9.0\\fluentassertions.6.9.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\giao5\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
