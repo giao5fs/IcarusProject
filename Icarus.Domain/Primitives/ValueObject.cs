@@ -10,7 +10,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
         return other is not null && ValuesAreEqual(other);
     }
 
-    public abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetAtomicValues();
 
     public override int GetHashCode()
     {

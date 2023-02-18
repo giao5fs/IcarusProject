@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Primitives;
+﻿using Icarus.Domain.Abtractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 

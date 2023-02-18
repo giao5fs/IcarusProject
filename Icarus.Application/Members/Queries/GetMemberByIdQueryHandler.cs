@@ -1,11 +1,13 @@
 ﻿using Icarus.Application.Abstractions.Messaging;
+using Icarus.Domain.Errors;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.Shared;
+using MediatR;
 
 namespace Icarus.Application.Members.Queries;
 
 internal sealed class GetMemberByIdQueryHandler
-    : IQueryHandler<GetMemberByIdQuery, MemberResponse>
+    : IQueryHandler<GetMemberByIdQuery, Result<MemberResponse>>
 {
     private readonly IMemberRepository _memberRepository;
 
@@ -22,12 +24,7 @@ internal sealed class GetMemberByIdQueryHandler
 
         if (member is null)
         {
-            return Result.Failure<MemberResponse>(
-                new Error(
-                    "Member.NotFound",
-                    $"The number with Id" +
-                    $"was not found"
-                    ));
+            return Result.Failure<MemberResponse>(DomainError.ErrorMember.MemberIdIsRequired);
         }
 
         return new MemberResponse(member.Id, member.Email);

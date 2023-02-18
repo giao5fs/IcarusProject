@@ -1,4 +1,5 @@
-﻿using Icarus.Domain.Entity;
+﻿using Icarus.Application.Abstractions.Data;
+using Icarus.Domain.Entity;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
@@ -7,9 +8,9 @@ namespace Icarus.Persistence.Repositories;
 
 public class MemberRepository : IMemberRepository
 {
-    private readonly IcarusDbContext _context;
+    private readonly IDbContext _context;
 
-    public MemberRepository(IcarusDbContext context)
+    public MemberRepository(IDbContext context)
     {
         _context = context;
     }
@@ -22,7 +23,7 @@ public class MemberRepository : IMemberRepository
 
     public async Task<bool> IsEmailUniqueAsync(Email email, CancellationToken cancellation = default)
     {
-        return !await _context.Members.AnyAsync(x => x.Email == email.Value, cancellationToken: cancellation);
+        return !await _context.Set<Member>().AnyAsync(x => x.Email == email.Value, cancellationToken: cancellation);
     }
 
     public async Task<Member?> GetByEmailAsync(Email email, CancellationToken cancellation = default)

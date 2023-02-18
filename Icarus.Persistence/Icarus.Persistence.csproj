@@ -15,9 +15,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Scrutor" Version="4.2.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Icarus.Application\Icarus.Application.csproj" />
     <ProjectReference Include="..\Icarus.Domain\Icarus.Domain.csproj" />
   </ItemGroup>
 

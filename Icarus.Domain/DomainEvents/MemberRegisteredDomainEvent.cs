@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Primitives;
+﻿using Icarus.Domain.Events;
 
 namespace Icarus.Domain.DomainEvents;
 

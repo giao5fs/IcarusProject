@@ -5,6 +5,7 @@ using Icarus.Domain.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Icarus.Application.Members.Commands.Login;
 
 namespace Icarus.Presentation.Controllers;
 
@@ -31,9 +32,9 @@ public sealed class MemberController : ApiController
         [FromBody] LoginRequest request,
         CancellationToken cancellationToken)
     {
-        var command = new LoginCommand(request.Email);
+        var command = new LoginCommand(request.Email, request.Password);
 
-        Result<string> token = await _sender.Send(command, cancellationToken);
+        Result<TokenResponse> token = await _sender.Send(command, cancellationToken);
         if (token.IsFailure)
         {
             return BadRequest(token);
@@ -50,6 +51,8 @@ public sealed class MemberController : ApiController
     {
         var command = new RegisterMemberCommand(
             request.Email,
+            request.Password,
+            request.ConfirmPassword,
             request.FirstName,
             request.LastName);
 

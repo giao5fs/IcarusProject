@@ -1,4 +1,6 @@
-﻿namespace Icarus.Domain.Primitives;
+﻿using Icarus.Domain.Events;
+
+namespace Icarus.Domain.Primitives;
 
 public abstract class AggregateRoot : Entity
 {

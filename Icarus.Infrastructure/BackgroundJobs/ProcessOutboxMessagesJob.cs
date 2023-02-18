@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Primitives;
+﻿using Icarus.Domain.Events;
 using Icarus.Persistence;
 using Icarus.Persistence.Outbox;
 using MediatR;
@@ -23,7 +23,7 @@ public class ProcessOutboxMessagesJob : IJob
     {
         try
         {
-             List<OutboxMessage> messages = await _context.Set<OutboxMessage>()
+             List<OutboxMessage> messages = await _context.OutboxMessages
             .Where(x => x.ProcessOnUtc == null)
             .Take(20)
             .ToListAsync(context.CancellationToken);

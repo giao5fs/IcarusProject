@@ -21,6 +21,7 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architect
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Icarus.Architecture.UnitTests.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\FluentAssertions.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\MediatR.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -40,6 +41,7 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architect
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -176,4 +178,8 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architect
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\obj\Debug\net6.0\Icarus.Architecture.UnitTests.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\obj\Debug\net6.0\Icarus.Architecture.UnitTests.genruntimeconfig.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\obj\Debug\net6.0\ref\Icarus.Architecture.UnitTests.dll
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Architecture.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll

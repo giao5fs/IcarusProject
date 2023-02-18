@@ -1,12 +1,18 @@
 using Icarus.App.Configuration;
+using Icarus.App.Middlewares;
+using Icarus.Infrastructure;
+using Icarus.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-    .AddInfrastructure()
-    .AddApplication()
+    .AddLogging()
+    .AddPersistence()
+    .AddInfrastructureBackgroundJob()
+    .AddInfrastructureAuthentication()
+    .AddInfrastructureServices()
     .AddPresentation()
-    .AddConfigureOptions();
+    .AddIfNotSeen();
 
 var app = builder.Build();
 
@@ -25,9 +31,11 @@ app.Use(async (ctx, next) =>
 
 app.UseCors("AllowAllOrigins");
 
-app.UseRouting();
+app.UseCustomExceptionHandler();
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
 
 app.UseAuthentication();
 

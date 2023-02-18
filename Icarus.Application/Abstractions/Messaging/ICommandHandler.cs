@@ -8,8 +8,8 @@ public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>
 {
 }
 
-public interface ICommandHandler<TCommand, TResponse>
-    : IRequestHandler<TCommand, Result<TResponse>>
+public interface ICommandHandler<in TCommand, TResponse>
+    : IRequestHandler<TCommand, TResponse>
     where TCommand : ICommand<TResponse>
 {
 }
