@@ -1,4 +1,6 @@
-﻿using Icarus.Application.Members.RegisterMember;
+﻿using Icarus.Application.Abstractions.Cryptography;
+using Icarus.Application.Abstractions.Data;
+using Icarus.Application.Members.RegisterMember;
 using Icarus.Domain.Entity;
 using Icarus.Domain.Errors;
 using Icarus.Domain.Repositories;
@@ -12,10 +14,12 @@ public class RegisterMemberCommandHandlerTest
     private readonly Mock<IMemberRepository> _memberRepositoryMock;
 
     private readonly Mock<IUnitOfWork> _unitOfWorkMock;
-    public RegisterMemberCommandHandlerTest()
+    private readonly Mock<IPasswordHasher> _passwordHasher;
+    public RegisterMemberCommandHandlerTest(Mock<IPasswordHasher> passwordHasher)
     {
         _memberRepositoryMock = new();
         _unitOfWorkMock = new();
+        _passwordHasher = passwordHasher;
     }
 
 
@@ -23,7 +27,12 @@ public class RegisterMemberCommandHandlerTest
     public async void Handle_Should_ReturnSuccessResult_WhenEmailIsUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand("email@test.com", "first", "last");
+        var command = new RegisterMemberCommand(
+            "email@test.com",
+            "123",
+            "123",
+            "first",
+            "last");
 
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
@@ -33,7 +42,8 @@ public class RegisterMemberCommandHandlerTest
 
         var handler = new RegisterMemberCommandHandler(
             _memberRepositoryMock.Object,
-            _unitOfWorkMock.Object);
+            _unitOfWorkMock.Object,
+            _passwordHasher.Object);
         // Act
         Result<Guid> result = await handler.Handle(command, default);
 
@@ -45,7 +55,12 @@ public class RegisterMemberCommandHandlerTest
     public async void Handle_Should_ReturnFailureResult_WhenEmailIsNotUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand("email@test.com", "first", "last");
+        var command = new RegisterMemberCommand(
+            "email@test.com",
+            "123",
+            "123",
+            "first",
+            "last");
 
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
@@ -55,20 +70,26 @@ public class RegisterMemberCommandHandlerTest
 
         var handler = new RegisterMemberCommandHandler(
             _memberRepositoryMock.Object,
-            _unitOfWorkMock.Object);
+            _unitOfWorkMock.Object,
+            _passwordHasher.Object);
         // Act
         Result<Guid> result = await handler.Handle(command, default);
 
         // Assert
         result.IsFailure.Should().BeTrue();
-        result.Error.Should().Be(DomainError.Member.EmailAlreadyInUse);
+        result.Error.Should().Be(DomainError.ErrorAuthentication.DuplicateEmail);
     }
 
     [Fact]
     public async void Handle_Should_AddOnRepository_WhenEmailIsUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand("email@test.com", "first", "last");
+        var command = new RegisterMemberCommand(
+            "email@test.com",
+            "123",
+            "123",
+            "first",
+            "last");
 
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
@@ -78,7 +99,8 @@ public class RegisterMemberCommandHandlerTest
 
         var handler = new RegisterMemberCommandHandler(
             _memberRepositoryMock.Object,
-            _unitOfWorkMock.Object);
+            _unitOfWorkMock.Object,
+            _passwordHasher.Object);
         // Act
         Result<Guid> result = await handler.Handle(command, default);
 
@@ -92,7 +114,12 @@ public class RegisterMemberCommandHandlerTest
     public async void Handle_Should_Not_CallUnitOfWork_WhenEmailIsNotUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand("email@test.com", "first", "last");
+        var command = new RegisterMemberCommand(
+            "email@test.com", 
+            "123", 
+            "123", 
+            "first", 
+            "last");
 
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
@@ -102,7 +129,8 @@ public class RegisterMemberCommandHandlerTest
 
         var handler = new RegisterMemberCommandHandler(
             _memberRepositoryMock.Object,
-            _unitOfWorkMock.Object);
+            _unitOfWorkMock.Object,
+            _passwordHasher.Object);
         // Act
         Result<Guid> result = await handler.Handle(command, default);
 

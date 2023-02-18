@@ -33,7 +33,9 @@ public sealed class LastName : ValueObject
 
         return new LastName(LastName);
     }
-    public override IEnumerable<object> GetAtomicValues()
+
+    internal static LastName Empty => new LastName(string.Empty);
+    protected override IEnumerable<object> GetAtomicValues()
     {
         yield return Value;
     }

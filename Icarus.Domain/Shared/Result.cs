@@ -28,7 +28,7 @@ public class Result
 
     public static Result<TValue> Failure<TValue>(Error error)
     {
-        return new Result<TValue>(default(TValue), false, error);
+        return new Result<TValue>(default, false, error);
     }
 
     public static Result<TValue> Create<TValue>(TValue val)
@@ -36,6 +36,18 @@ public class Result
         return new Result<TValue>(val, true, Error.None);
     }
 
+    public static Result FirstFailureOrSuccess(params Result[] results)
+    {
+        foreach (Result result in results)
+        {
+            if (result.IsFailure)
+            {
+                return result;
+            }
+        }
+
+        return Success();
+    }
 }
 
 public class Result<TValue> : Result
@@ -49,5 +61,4 @@ public class Result<TValue> : Result
         throw new InvalidOperationException("The value of a failure result can not be accepted");
 
     public static implicit operator Result<TValue>(TValue? val) => Create(val)!;
-
 }
