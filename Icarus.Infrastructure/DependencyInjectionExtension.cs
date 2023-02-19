@@ -68,6 +68,8 @@ public static class DependencyInjectionExtension
 
         services.AddScoped<IMemberIdentifierProvider, MemberIdentifierProvider>();
 
+        services.AddSingleton<IPermissionService, PermissionService>();
+
         return services;
     }
 
