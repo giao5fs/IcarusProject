@@ -7,6 +7,7 @@ namespace Icarus.Domain.ValueObjects;
 
 public sealed class Email : ValueObject
 {
+    public const int MaxLength = 256;
     internal static readonly Email Empty = new Email();
     private const string EmailRegexPattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
 
@@ -25,9 +26,9 @@ public sealed class Email : ValueObject
     public static Result<Email> Create(string? email)
     {
         return email
-            .ToResult(new Error("", "Email should be empty."))
+            .ToResult(new Error("", "Email should not be empty."))
             .OnSuccess(e => e?.Trim())
-            .Ensure(e => e?.Length != 0, new Error("", "Email should be empty."))
+            .Ensure(e => e?.Length != 0, new Error("", "Email should not be empty."))
             .Ensure(e => e?.Length < 256, new Error("", "Email is too long."))
             .Ensure(e => Regex.IsMatch(e, EmailRegexPattern, RegexOptions.IgnoreCase), new Error("", "Email is invalid."))
             .Map(e => e is null ? Empty : new Email(e));

@@ -35,10 +35,10 @@ public sealed class Password : ValueObject
         Result.Create(password)
             .Ensure(p => !string.IsNullOrWhiteSpace(p), DomainError.ErrorPassword.NullOrEmpty)
             .Ensure(p => p.Length >= MinPasswordLength, DomainError.ErrorPassword.TooShort)
-            .Ensure(p => p.Any(IsLower), DomainError.ErrorPassword.MissingLowercaseLetter)
-            .Ensure(p => p.Any(IsUpper), DomainError.ErrorPassword.MissingUppercaseLetter)
-            .Ensure(p => p.Any(IsDigit), DomainError.ErrorPassword.MissingDigit)
-            .Ensure(p => p.Any(IsNonAlphaNumeric), DomainError.ErrorPassword.MissingNonAlphaNumeric)
+            //.Ensure(p => p.Any(IsLower), DomainError.ErrorPassword.MissingLowercaseLetter)
+            //.Ensure(p => p.Any(IsUpper), DomainError.ErrorPassword.MissingUppercaseLetter)
+            //.Ensure(p => p.Any(IsDigit), DomainError.ErrorPassword.MissingDigit)
+            //.Ensure(p => p.Any(IsNonAlphaNumeric), DomainError.ErrorPassword.MissingNonAlphaNumeric)
             .Map(p => new Password(p));
 
     /// <inheritdoc />

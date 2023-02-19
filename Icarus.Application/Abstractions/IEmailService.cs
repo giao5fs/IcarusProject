@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Entity;
+﻿using Icarus.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

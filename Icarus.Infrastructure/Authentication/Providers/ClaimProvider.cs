@@ -1,6 +1,6 @@
 ﻿using Icarus.Application.Abstractions.Data;
-using Icarus.Domain.Authorization;
-using Icarus.Domain.Entity;
+using Icarus.Domain.Entities;
+using Icarus.Domain.Enums;
 using Icarus.Infrastructure.Authentication.Abstractions;
 using Icarus.Infrastructure.Authentication.Constants;
 using Icarus.Infrastructure.Authentication.Permissions;
@@ -22,13 +22,12 @@ public class ClaimProvider : IClaimsProvider
         var claims = new List<Claim>()
         {
             new Claim(JwtClaimTypes.MemberId, member.Id.ToString()),
-            new Claim(JwtClaimTypes.Email, member.Email.ToString()),
-            new Claim(JwtClaimTypes.Name, $"{member.FirstName} {member.LastName}")
+            new Claim(JwtClaimTypes.Email, member.Email.ToString())
         };
 
         var permissionCalculator = new PermissionCalculator(_dbContext);
 
-        Permission[] permissions = await PermissionCalculator.CalculatePermissionsForMemberAsync(member.Id);
+        PermissionEnum[] permissions = await PermissionCalculator.CalculatePermissionsForMemberAsync(member.Id);
 
         IEnumerable<Claim> permissionClaims = permissions
             .Select(p => new Claim(JwtClaimTypes.Permissions, p.ToString()));

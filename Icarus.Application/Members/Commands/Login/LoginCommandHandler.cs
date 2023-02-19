@@ -1,7 +1,7 @@
 ﻿using Icarus.Application.Abstractions.Authentication;
 using Icarus.Application.Abstractions.Messaging;
 using Icarus.Application.Members.Commands.Login;
-using Icarus.Domain.Entity;
+using Icarus.Domain.Entities;
 using Icarus.Domain.Errors;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.Services;

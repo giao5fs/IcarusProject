@@ -3,80 +3,55 @@ using System.Reflection;
 
 namespace Icarus.Domain.Primitives;
 
-public abstract class Enumeration : IComparable
+public abstract class Enumeration<T> : IEquatable<T>
+    where T : Enumeration<T>
 {
-    public int Value { get; private set; }
-    public string Name { get; private set; }
-    protected Enumeration()
+    private static readonly Dictionary<int, T> Enumerations = CreateEnumerations();
+    protected Enumeration(int id, string name)
     {
-        Value = default;
-        Name = string.Empty;
-    }
-
-    protected Enumeration(int value, string name)
-    {
-        Value = value;
+        Id = id;
         Name = name;
     }
-
-    public static T FromValue<T>(int value) where T : Enumeration
+    public int Id { get; protected init; }
+    public string Name { get; protected init; }
+    public static T[] GetValues()
     {
-        T matchingItem = GetAll<T>().First(item => item.Value == value);
-        return matchingItem;
+        return Enumerations.Values.ToArray();
+    }
+    public static T? FromValue(int value)
+    {
+        return Enumerations.TryGetValue(value, out T? result) ? result : default(T?);
     }
 
-    public static IEnumerable<T> GetAll<T>() where T : Enumeration
+    public static T? FromName(string name)
     {
-        Type type = typeof(T);
-
-        object? o = Activator.CreateInstance(type, true);
-
-        if (o is null)
-        {
-            throw new EnumerationInvalidException(type);
-        }
-
-        FieldInfo[] fields = type.GetFields(
-            BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
-
-        foreach (FieldInfo info in fields)
-        {
-            var instance = (T)o;
-
-            if (info.GetValue(instance) is T locatedValue)
-            {
-                yield return locatedValue;
-            }
-        }
+        return Enumerations.Values.SingleOrDefault(x => x.Name == name);
     }
-
-    public int CompareTo(object? other)
+    public bool Equals(T? other)
     {
-        return other is null ? 1 : Value.CompareTo(((Enumeration)other).Value);
+        if (other is null)
+        {
+            return false;
+        }
+
+        return GetType() == other.GetType() && Id == other.Id;
     }
 
     public override bool Equals(object? obj)
     {
-        if (obj is null)
-        {
-            return false;
-        }
-
-        if (obj is not Enumeration otherValue)
-        {
-            return false;
-        }
-
-        return GetType() == obj.GetType() && otherValue.Value.Equals(Value);
+        return obj is Enumeration<T> other &&
+            Equals(other);
     }
 
-    public override int GetHashCode()
+    private static Dictionary<int, T> CreateEnumerations()
     {
-        return Value.GetHashCode();
-    }
+        var enumerationType = typeof(T);
 
-    public override string ToString()
-    {
-        return Name;
+        var fieldsForType = enumerationType
+            .GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)
+            .Where(f => enumerationType.IsAssignableFrom(f.FieldType))
+            .Select(f => (T)f.GetValue(default)!);
+
+        return fieldsForType.ToDictionary(x => x.Id);
     }
 }

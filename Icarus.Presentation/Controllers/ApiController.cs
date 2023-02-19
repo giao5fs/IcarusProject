@@ -1,11 +1,12 @@
 ﻿using Icarus.Domain.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Icarus.Presentation.Controllers;
 
-[ApiController]
+[Authorize]
 public abstract class ApiController : ControllerBase
 {
     protected readonly ISender _sender;

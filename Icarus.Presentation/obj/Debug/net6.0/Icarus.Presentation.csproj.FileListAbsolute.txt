@@ -20,8 +20,12 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentat
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Presentation.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Application.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Domain.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Infrastructure.dll
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Persistence.dll
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Application.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Infrastructure.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Domain.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\bin\Debug\net6.0\Icarus.Persistence.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\obj\Debug\net6.0\Icarus.Presentation.csproj.AssemblyReference.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\obj\Debug\net6.0\Icarus.Presentation.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\Icarus.Presentation\obj\Debug\net6.0\Icarus.Presentation.AssemblyInfoInputs.cache
