@@ -1,20 +1,26 @@
 ﻿using Icarus.Application.Abstractions.Data;
 using Icarus.Domain.Abtractions;
+using Icarus.Domain.Entities;
 using Icarus.Domain.Primitives;
 using Icarus.Persistence.Outbox;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System.Reflection;
 
 namespace Icarus.Persistence;
 
 public sealed class IcarusDbContext : DbContext, IDbContext, IUnitOfWork
 {
     public DbSet<OutboxMessage> OutboxMessages { get; set; }
+    public DbSet<Member> Members { get; set; }
+
     public IcarusDbContext(DbContextOptions<IcarusDbContext> options) : base(options)
     {
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
         base.OnModelCreating(modelBuilder);
     }
 

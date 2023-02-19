@@ -470,6 +470,9 @@
             "projectReferences": {
               "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj": {
                 "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Application\\Icarus.Application.csproj"
+              },
+              "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\giao5\\Desktop\\pixelz\\battlehungerone\\API\\IcarusProject\\Icarus.Infrastructure\\Icarus.Infrastructure.csproj"
               }
             }
           }

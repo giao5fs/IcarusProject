@@ -1,4 +1,6 @@
-﻿namespace Icarus.Persistence.Outbox;
+﻿using Icarus.Domain.Primitives;
+
+namespace Icarus.Persistence.Outbox;
 
 public class OutboxMessage
 {

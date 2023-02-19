@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Entity;
+﻿using Icarus.Domain.Entities;
 using Icarus.Domain.ValueObjects;
 
 namespace Icarus.Domain.Repositories;

@@ -1,6 +1,6 @@
 ﻿using Icarus.Application.Abstractions.Data;
 using Icarus.Application.Abstractions.Messaging;
-using Icarus.Domain.Entity;
+using Icarus.Domain.Entities;
 using Icarus.Domain.Errors;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.Shared;
@@ -36,35 +36,16 @@ internal sealed class RegisterMemberCommandHandler
             return Result.Failure<Guid>(DomainError.ErrorAuthentication.DuplicateEmail);
         }
 
-        var memberResult = CreateMemberResult(
-            emailResult,
-            passwordResult,
-            _passwordHasher.HashPassword,
-            firstNameResult,
-            lastNameResult);
+        string hashPassword = _passwordHasher.HashPassword(passwordResult.Value);
+
+        Result<Member> memberResult = Result
+            .FirstFailureOrSuccess(emailResult, passwordResult, firstNameResult, lastNameResult)
+            .Map(() => Result.Success(Member.Create(Guid.NewGuid(), emailResult.Value.Value, hashPassword, firstNameResult.Value.Value, lastNameResult.Value.Value)));
 
         _memberRepository.Add(memberResult.Value);
 
         await _unitOfWork.SaveChangeAsync(cancellationToken);
 
         return Result.Success(memberResult.Value.Id);
-    }
-
-    private static Result<Member> CreateMemberResult(
-        Result<Email> email,
-        Result<Password> password,
-        Func<Password, string> hashPassword,
-        Result<FirstName> firstName,
-        Result<LastName> lastName)
-    {
-        return Result
-            .FirstFailureOrSuccess(firstName, lastName, email, password)
-            .Map(() => Result.Success(
-                Member.Create(
-                    Guid.NewGuid(),
-                    email.Value,
-                    hashPassword(password.Value),
-                    firstName.Value,
-                    lastName.Value)));
     }
 }

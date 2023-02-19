@@ -1856,6 +1856,7 @@
       "Icarus.Presentation/1.0.0": {
         "dependencies": {
           "Icarus.Application": "1.0.0",
+          "Icarus.Infrastructure": "1.0.0",
           "MediatR": "11.1.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },

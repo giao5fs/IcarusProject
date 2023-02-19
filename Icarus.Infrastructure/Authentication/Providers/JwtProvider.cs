@@ -1,7 +1,9 @@
 ﻿using Icarus.Application.Abstractions.Authentication;
 using Icarus.Application.Members.Commands.Login;
-using Icarus.Domain.Entity;
+using Icarus.Domain.Entities;
 using Icarus.Infrastructure.Authentication.Abstractions;
+using Icarus.Infrastructure.Authentication.Constants;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -12,28 +14,33 @@ namespace Icarus.Infrastructure.Authentication.Providers;
 
 public sealed class JwtProvider : IJwtProvider
 {
-    private readonly JwtOptions _jwtOptions;
+    private readonly JwtOptions _configuration;
     private readonly IClaimsProvider _claimsProvider;
 
-    public JwtProvider(IOptions<JwtOptions> jwtOptions, IClaimsProvider claimsProvider)
+    public JwtProvider(IClaimsProvider claimsProvider, IOptions<JwtOptions> configuration)
     {
-        _jwtOptions = jwtOptions.Value;
         _claimsProvider = claimsProvider;
+        _configuration = configuration.Value;
     }
 
     public async Task<TokenResponse> GenerateTokenAsync(Member member)
     {
-        var security = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.SecretKey));
+        var SecretKey = _configuration.SecretKey;
+        var TokenExpirationInMinutes = _configuration.TokenExpirationInMinutes;
+        var Issuer = _configuration.Issuer;
+        var Audience = _configuration.Audience;
+
+        var security = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SecretKey));
 
         var signingCredentials = new SigningCredentials(security, SecurityAlgorithms.HmacSha256);
 
         Claim[] claims = await _claimsProvider.GetClaimsAsync(member);
 
-        DateTime tokenExpirationTime = DateTime.UtcNow.AddMinutes(_jwtOptions.TokenExpirationInMinutes);
+        DateTime tokenExpirationTime = DateTime.UtcNow.AddMinutes(TokenExpirationInMinutes);
 
         var token = new JwtSecurityToken(
-            _jwtOptions.Issuer,
-            _jwtOptions.Audience,
+            Issuer,
+            Audience,
             claims,
             null,
             tokenExpirationTime,

@@ -4,15 +4,15 @@ public static class DependencyInjectionExtension
 {
     public static IServiceCollection AddIfNotSeen(this IServiceCollection services)
     {
-        services.Scan(
-            selector => selector
-            .FromAssemblies(
-                Icarus.Infrastructure.AssemblyReference.Assembly,
-                Icarus.Persistence.AssemblyReference.Assembly)
-            .AddClasses(false)
-            .UsingRegistrationStrategy(Scrutor.RegistrationStrategy.Skip)
-            .AsMatchingInterface()
-            .WithScopedLifetime());
+        //services.Scan(
+        //    selector => selector
+        //    .FromAssemblies(
+        //        Icarus.Infrastructure.AssemblyReference.Assembly,
+        //        Icarus.Persistence.AssemblyReference.Assembly)
+        //    .AddClasses(false)
+        //    .UsingRegistrationStrategy(Scrutor.RegistrationStrategy.Skip)
+        //    .AsMatchingInterface()
+        //    .WithScopedLifetime());
         return services;
     }
 

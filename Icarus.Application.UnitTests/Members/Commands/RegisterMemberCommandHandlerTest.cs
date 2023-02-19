@@ -1,7 +1,7 @@
 ﻿using Icarus.Application.Abstractions.Cryptography;
 using Icarus.Application.Abstractions.Data;
 using Icarus.Application.Members.RegisterMember;
-using Icarus.Domain.Entity;
+using Icarus.Domain.Entities;
 using Icarus.Domain.Errors;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.Shared;

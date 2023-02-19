@@ -28,10 +28,10 @@ public sealed class ConvertDomainEventsToOutboxMessagesInterceptor : SaveChanges
                 aggregate.ClearDomainEvents();
                 return domainEvents;
             })
-            .Select(domainEvent => new OutboxMessage
+            .Select(domainEvent => new OutboxMessage()
             {
                 Id = Guid.NewGuid(),
-                OccurredOnUtc = DateTime.Now,
+                OccurredOnUtc = DateTime.UtcNow,
                 Type = domainEvent.GetType().Name,
                 Content = JsonConvert.SerializeObject(
                     domainEvent,

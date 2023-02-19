@@ -1,5 +1,5 @@
 ﻿using Icarus.Application.Abstractions.Data;
-using Icarus.Domain.Authorization;
+using Icarus.Domain.Enums;
 
 namespace Icarus.Infrastructure.Authentication.Permissions;
 
@@ -12,12 +12,12 @@ internal sealed class PermissionCalculator
         _dbContext = dbContext;
     }
 
-    internal static async Task<Permission[]> CalculatePermissionsForMemberAsync(Guid guid)
+    internal static async Task<PermissionEnum[]> CalculatePermissionsForMemberAsync(Guid guid)
     {
         await Task.Delay(1);
         return new[]
         {
-            Permission.AccessEverything
+            PermissionEnum.AccessEverything
         };
     }
 }

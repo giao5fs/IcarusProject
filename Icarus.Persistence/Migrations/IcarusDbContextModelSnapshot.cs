@@ -22,13 +22,19 @@ namespace Icarus.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Icarus.Domain.Entity.Member", b =>
+            modelBuilder.Entity("Icarus.Domain.Entities.Member", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedOnUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DeletedOnUtc")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
@@ -46,26 +52,105 @@ namespace Icarus.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Members");
+                    b.ToTable("Members", (string)null);
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.Permission", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Permissions", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0e31524a-e58f-444a-8d5a-c1145313bbea"),
-                            CreatedOnUtc = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "Blair",
-                            FirstName = "Carager",
-                            LastName = "blair@gmail.com"
+                            Id = 1,
+                            Name = "MemberRead"
                         },
                         new
                         {
-                            Id = new Guid("c88c5fe4-d252-455b-806d-c1b311dedd50"),
-                            CreatedOnUtc = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "Harry",
-                            FirstName = "Porter",
-                            LastName = "harry@gmail.com"
+                            Id = 2,
+                            Name = "MemberCreate"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "MemberUpdate"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "MemberDelete"
+                        },
+                        new
+                        {
+                            Id = 2147483647,
+                            Name = "AccessEverything"
+                        });
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Registered"
+                        });
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.RolePermission", b =>
+                {
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PermissionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RoleId", "PermissionId");
+
+                    b.ToTable("RolePermission");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleId = 1,
+                            PermissionId = 1
+                        },
+                        new
+                        {
+                            RoleId = 1,
+                            PermissionId = 3
                         });
                 });
 

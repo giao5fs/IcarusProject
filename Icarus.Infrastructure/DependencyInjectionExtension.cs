@@ -5,12 +5,18 @@ using Icarus.Domain.Services;
 using Icarus.Infrastructure.Authentication.Abstractions;
 using Icarus.Infrastructure.Authentication.Constants;
 using Icarus.Infrastructure.Authentication.Cryptography;
+using Icarus.Infrastructure.Authentication.Permissions;
 using Icarus.Infrastructure.Authentication.Providers;
 using Icarus.Infrastructure.BackgroundJobs;
 using Icarus.Infrastructure.Options;
 using Icarus.Infrastructure.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Quartz;
+using System.Text;
 
 namespace Icarus.Infrastructure;
 
@@ -25,14 +31,30 @@ public static class DependencyInjectionExtension
         return services;
     }
 
-    public static IServiceCollection AddInfrastructureAuthentication(this IServiceCollection services)
+    public static IServiceCollection AddInfrastructureAuthentication(this IServiceCollection services, IConfiguration _configuration)
     {
-        //services.ConfigureOptions<JwtOptionsSetup>();
 
-        services.ConfigureOptions<JwtBearerOptionsSetup>();
+        services.ConfigureOptions<JwtOptionsSetup>();
+
+        //services.ConfigureOptions<JwtBearerOptionsSetup>();
+
+        //services.AddAuthentication(JwtDefault.AuthenticationScheme).AddJwtBearer();
 
         services.AddAuthentication(JwtDefault.AuthenticationScheme)
-            .AddJwtBearer();
+            .AddJwtBearer(options => options.TokenValidationParameters = new()
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = _configuration[JwtDefault.IssuerSettingsKey],
+                ValidAudience = _configuration[JwtDefault.AudienceSettingsKey],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration[JwtDefault.SecretSettingsKey]!))
+            });
+
+        services.AddAuthorization();
+        services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
+        services.AddSingleton<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();
 
         services.AddTransient<IPasswordHasher, PasswordHasher>();
 
@@ -61,7 +83,7 @@ public static class DependencyInjectionExtension
                     trigger
                     .ForJob(jobKey)
                     .WithSimpleSchedule(schedule => schedule
-                    .WithIntervalInSeconds(120)
+                    .WithIntervalInSeconds(30)
                     .RepeatForever()));
             configure.UseMicrosoftDependencyInjectionJobFactory();
         });

@@ -3,30 +3,32 @@ using Icarus.Persistence;
 using Icarus.Persistence.Outbox;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Quartz;
-using System.Diagnostics;
 
 namespace Icarus.Infrastructure.BackgroundJobs;
 public class ProcessOutboxMessagesJob : IJob
 {
     private readonly IcarusDbContext _context;
     private readonly IPublisher _publisher;
+    private readonly ILogger<ProcessOutboxMessagesJob> _logger;
 
-    public ProcessOutboxMessagesJob(IcarusDbContext context, IPublisher publisher)
+    public ProcessOutboxMessagesJob(IcarusDbContext context, IPublisher publisher, ILogger<ProcessOutboxMessagesJob> logger)
     {
         _context = context;
         _publisher = publisher;
+        _logger = logger;
     }
 
     public async Task Execute(IJobExecutionContext context)
     {
         try
         {
-             List<OutboxMessage> messages = await _context.OutboxMessages
-            .Where(x => x.ProcessOnUtc == null)
-            .Take(20)
-            .ToListAsync(context.CancellationToken);
+            List<OutboxMessage> messages = await _context.OutboxMessages
+           .Where(x => x.ProcessOnUtc == null)
+           .Take(20)
+           .ToListAsync(context.CancellationToken);
 
             foreach (OutboxMessage message in messages)
             {
@@ -39,7 +41,7 @@ public class ProcessOutboxMessagesJob : IJob
 
                 if (domainEvent is null)
                 {
-                    Debug.WriteLine("DomainEvent is null");
+                    _logger.LogInformation("DomainEvent is null");
                     continue;
                 }
 
@@ -50,7 +52,7 @@ public class ProcessOutboxMessagesJob : IJob
         }
         catch (Exception ex)
         {
-            Debug.Write(ex.Message);
+            _logger.LogError(ex.Message);
         }
 
         await _context.SaveChangesAsync();

@@ -17,6 +17,9 @@ public static class DomainError
         public static Error DuplicateEmail => new Error(
             "Authentication.DuplicateEmail",
             "The email is already taken.");
+        public static Error UnAuthorized => new Error(
+        "Authentication.UnAuthorized",
+        "Authentication is UnAuthorized.");
     }
 
     /// <summary>

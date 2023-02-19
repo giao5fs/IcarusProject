@@ -1,5 +1,6 @@
 using Icarus.App.Configuration;
 using Icarus.App.Middlewares;
+using Icarus.Application;
 using Icarus.Infrastructure;
 using Icarus.Persistence;
 
@@ -9,9 +10,10 @@ builder.Services
     .AddLogging()
     .AddPersistence()
     .AddInfrastructureBackgroundJob()
-    .AddInfrastructureAuthentication()
+    .AddInfrastructureAuthentication(builder.Configuration)
     .AddInfrastructureServices()
     .AddPresentation()
+    .AddApplication()
     .AddIfNotSeen();
 
 var app = builder.Build();
@@ -25,6 +27,7 @@ if (app.Environment.IsDevelopment())
 app.Use(async (ctx, next) =>
 {
     Console.WriteLine("Before HttpRequest");
+    var user = ctx.User;    
     await next(ctx);
     Console.WriteLine("After HttpRequest");
 });

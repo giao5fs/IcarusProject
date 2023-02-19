@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Entity;
+﻿using Icarus.Domain.Entities;
 using System.Diagnostics;
 
 namespace Icarus.Application.Abstractions;

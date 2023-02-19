@@ -1,4 +1,4 @@
-﻿using Icarus.Domain.Entity;
+﻿using Icarus.Domain.Entities;
 using Icarus.Domain.Repositories;
 using Icarus.Domain.ValueObjects;
 using Microsoft.Extensions.Caching.Memory;

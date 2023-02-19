@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Icarus.Application\Icarus.Application.csproj" />
+    <ProjectReference Include="..\Icarus.Infrastructure\Icarus.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

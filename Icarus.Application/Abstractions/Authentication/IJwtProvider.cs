@@ -1,5 +1,5 @@
 ﻿using Icarus.Application.Members.Commands.Login;
-using Icarus.Domain.Entity;
+using Icarus.Domain.Entities;
 
 namespace Icarus.Application.Abstractions.Authentication;
 

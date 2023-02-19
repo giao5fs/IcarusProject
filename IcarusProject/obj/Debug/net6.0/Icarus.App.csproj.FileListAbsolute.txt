@@ -89,13 +89,6 @@ D:\Works\2023\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.dll
 D:\Works\2023\IcarusProject\IcarusProject\obj\Debug\net6.0\ref\Icarus.App.dll
 D:\Works\2023\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.pdb
 D:\Works\2023\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.genruntimeconfig.cache
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.csproj.AssemblyReference.cache
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.AssemblyInfoInputs.cache
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.AssemblyInfo.cs
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.csproj.CoreCompileInputs.cache
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\appsettings.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.App.exe
@@ -171,6 +164,13 @@ C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bi
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.Persistence.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.Presentation.pdb
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\bin\Debug\net6.0\Icarus.Domain.pdb
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.csproj.AssemblyReference.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.AssemblyInfoInputs.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.AssemblyInfo.cs
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.csproj.CoreCompileInputs.cache
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\Icarus.App.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\giao5\Desktop\pixelz\battlehungerone\API\IcarusProject\IcarusProject\obj\Debug\net6.0\scopedcss\bundle\Icarus.App.styles.css
