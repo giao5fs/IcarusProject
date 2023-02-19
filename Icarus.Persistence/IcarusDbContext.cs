@@ -13,6 +13,8 @@ public sealed class IcarusDbContext : DbContext, IDbContext, IUnitOfWork
 {
     public DbSet<OutboxMessage> OutboxMessages { get; set; }
     public DbSet<Member> Members { get; set; }
+    public DbSet<Role> Roles { get; set; }
+    public DbSet<Permission> Permissions { get; set; }
 
     public IcarusDbContext(DbContextOptions<IcarusDbContext> options) : base(options)
     {

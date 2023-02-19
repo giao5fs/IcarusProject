@@ -27,7 +27,6 @@ if (app.Environment.IsDevelopment())
 app.Use(async (ctx, next) =>
 {
     Console.WriteLine("Before HttpRequest");
-    var user = ctx.User;    
     await next(ctx);
     Console.WriteLine("After HttpRequest");
 });

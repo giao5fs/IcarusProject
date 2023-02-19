@@ -25,8 +25,6 @@ public class Member : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
     public DateTime? DeletedOnUtc { get; set; }
     public bool Deleted { get; set; }
 
-    public ICollection<Role> Roles { get; set; }
-
     public static Member Create(Guid id, string email, string hashPassword, string firstName, string lastName)
     {
         var member = new Member(id, email, hashPassword, firstName, lastName);
