@@ -1,3 +1,4 @@
 IcarusProject/appsettings.json
 .vs/
 **/bin/
+**/obj/
