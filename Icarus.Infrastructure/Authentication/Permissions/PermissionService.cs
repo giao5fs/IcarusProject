@@ -18,18 +18,13 @@ public class PermissionService : IPermissionService
     {
         using var scope = _serviceScopeFactory.CreateScope();
         var _context = scope.ServiceProvider.GetService<IcarusDbContext>();
-        var roles = await _context!.Set<Member>()
+
+        ICollection<Role>[] roles = await _context!.Set<Member>()
         .Include(x => x.Roles)
         .ThenInclude(x => x.Permissions)
         .Where(x => x.Id == memberId)
         .Select(x => x.Roles)
         .ToArrayAsync();
-
-        var roles = from m in _context.Members
-                    join r in _context.Roles
-                    on m.Id equals p.Id
-
-                    select
 
         return roles
             .SelectMany(x => x)

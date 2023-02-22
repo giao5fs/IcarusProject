@@ -8,5 +8,6 @@ namespace Icarus.Application.Members.RegisterMember
         string Password,
         string ConfirmPassword,
         string FirstName,
-        string LastName) : ICommand<Result<Guid>>;
+        string LastName
+        ) : ICommand<Result<Guid>>;
 }

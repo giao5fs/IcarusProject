@@ -43,7 +43,8 @@ public class AccountController : ApiController
             request.Password,
             request.ConfirmPassword,
             request.FirstName,
-            request.LastName);
+            request.LastName
+            );
 
         Result<Guid> result = await _sender.Send(command, cancellationToken);
 

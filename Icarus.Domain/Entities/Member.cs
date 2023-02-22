@@ -15,7 +15,6 @@ public class Member : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
         FirstName = firstName;
         LastName = lastName;
     }
-
     public string Email { get; set; }
     public string Password { get; set; }
     public string FirstName { get; set; }
@@ -24,6 +23,7 @@ public class Member : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
     public DateTime? LastModifiedOnUtc { get; set; }
     public DateTime? DeletedOnUtc { get; set; }
     public bool Deleted { get; set; }
+    public ICollection<Role> Roles { get; set; }
 
     public static Member Create(Guid id, string email, string hashPassword, string firstName, string lastName)
     {
