@@ -20,20 +20,14 @@ public class RegisterMemberCommandHandlerTest
         _memberRepositoryMock = new();
         _unitOfWorkMock = new();
         _passwordHasher = passwordHasher;
+        command = new RegisterMemberCommand("email@test.com", "123", "123", "first", "last");
     }
 
-
+    RegisterMemberCommand command;
     [Fact]
     public async void Handle_Should_ReturnSuccessResult_WhenEmailIsUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand(
-            "email@test.com",
-            "123",
-            "123",
-            "first",
-            "last");
-
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
                 It.IsAny<Email>(),
@@ -55,13 +49,6 @@ public class RegisterMemberCommandHandlerTest
     public async void Handle_Should_ReturnFailureResult_WhenEmailIsNotUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand(
-            "email@test.com",
-            "123",
-            "123",
-            "first",
-            "last");
-
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
                 It.IsAny<Email>(),
@@ -84,13 +71,6 @@ public class RegisterMemberCommandHandlerTest
     public async void Handle_Should_AddOnRepository_WhenEmailIsUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand(
-            "email@test.com",
-            "123",
-            "123",
-            "first",
-            "last");
-
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
                 It.IsAny<Email>(),
@@ -114,13 +94,6 @@ public class RegisterMemberCommandHandlerTest
     public async void Handle_Should_Not_CallUnitOfWork_WhenEmailIsNotUnique()
     {
         // Arrange
-        var command = new RegisterMemberCommand(
-            "email@test.com", 
-            "123", 
-            "123", 
-            "first", 
-            "last");
-
         _memberRepositoryMock.Setup(
             x => x.IsEmailUniqueAsync(
                 It.IsAny<Email>(),

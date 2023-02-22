@@ -73,7 +73,12 @@ namespace Icarus.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("RoleId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("Permissions", (string)null);
 
@@ -113,11 +118,16 @@ namespace Icarus.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<Guid?>("MemberId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MemberId");
 
                     b.ToTable("Roles", (string)null);
 
@@ -180,6 +190,30 @@ namespace Icarus.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("OutboxMessages");
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.Permission", b =>
+                {
+                    b.HasOne("Icarus.Domain.Entities.Role", null)
+                        .WithMany("Permissions")
+                        .HasForeignKey("RoleId");
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.Role", b =>
+                {
+                    b.HasOne("Icarus.Domain.Entities.Member", null)
+                        .WithMany("Roles")
+                        .HasForeignKey("MemberId");
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.Member", b =>
+                {
+                    b.Navigation("Roles");
+                });
+
+            modelBuilder.Entity("Icarus.Domain.Entities.Role", b =>
+                {
+                    b.Navigation("Permissions");
                 });
 #pragma warning restore 612, 618
         }
