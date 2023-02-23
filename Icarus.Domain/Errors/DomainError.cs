@@ -97,31 +97,6 @@ public static class DomainError
 
         public static Error OccurredOnIsRequired => new Error("Member.DateMissing", "The occurred on date is required.");
     }
-
-    /// <summary>
-    /// Contains the income errors.
-    /// </summary>
-    public static class ErrorIncome
-    {
-        public static Error UserIdIsRequired => new Error("Income.UserIdMissing", "The user identifier is required.");
-
-        public static Error CurrencyIdIsRequired => new Error(
-            "Income.CurrencyMissing",
-            "The currency identifier is required.");
-
-        public static Error OccurredOnIsRequired => new Error("Income.DateMissing", "The occurred on date is required.");
-    }
-
-    /// <summary>
-    /// Contains the currency errors.
-    /// </summary>
-    public static class ErrorCurrency
-    {
-        public static Error NotFound => new Error(
-            "Currency.NotFound",
-            "The currency with the specified identifier was not found.");
-    }
-
     /// <summary>
     /// Contains the role errors.
     /// </summary>
