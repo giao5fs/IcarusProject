@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using System.Reflection;
+using Icarus.Domain.DomainEvents;
 
 namespace Icarus.Application;
 

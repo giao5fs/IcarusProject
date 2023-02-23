@@ -3,17 +3,18 @@ using Icarus.App.Middlewares;
 using Icarus.Application;
 using Icarus.Infrastructure;
 using Icarus.Persistence;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddLogging()
+    .AddApplication()
     .AddPersistence()
     .AddInfrastructureBackgroundJob()
     .AddInfrastructureAuthentication(builder.Configuration)
     .AddInfrastructureServices()
     .AddPresentation()
-    .AddApplication()
     .AddIfNotSeen();
 
 var app = builder.Build();

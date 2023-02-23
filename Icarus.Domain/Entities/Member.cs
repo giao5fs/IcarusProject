@@ -29,7 +29,7 @@ public class Member : AggregateRoot, IAuditableEntity, ISoftDeletableEntity
     {
         var member = new Member(id, email, hashPassword, firstName, lastName);
 
-        member.RaiseDomainEvent(new MemberRegisteredDomainEvent(member.Id));
+        member.RaiseDomainEvent(new MemberRegisteredDomainEvent(id, member.Id));
 
         return member;
     }

@@ -1,6 +1,8 @@
 ﻿using Icarus.Application.Abstractions.Authentication;
 using Icarus.Application.Abstractions.Caching;
 using Icarus.Application.Abstractions.Cryptography;
+using Icarus.Application.Members.Events;
+using Icarus.Domain.DomainEvents;
 using Icarus.Domain.Services;
 using Icarus.Infrastructure.Authentication.Abstractions;
 using Icarus.Infrastructure.Authentication.Constants;
@@ -8,14 +10,17 @@ using Icarus.Infrastructure.Authentication.Cryptography;
 using Icarus.Infrastructure.Authentication.Permissions;
 using Icarus.Infrastructure.Authentication.Providers;
 using Icarus.Infrastructure.BackgroundJobs;
+using Icarus.Infrastructure.Idempotence;
 using Icarus.Infrastructure.Options;
 using Icarus.Infrastructure.Services;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Quartz;
+using System.Reflection;
 using System.Text;
 
 namespace Icarus.Infrastructure;
@@ -26,6 +31,10 @@ public static class DependencyInjectionExtension
     {
         services.AddMemoryCache();
 
+        //services.AddMediatR(typeof(MemberRegisteredDomainEventHandler));
+        //services.AddMediatR(typeof(PerformBackgroundCheckWhenMemberRegisteredDomainEventHandler));
+
+        services.Decorate(typeof(INotificationHandler<>), typeof(IdempotentDomainEventHandler<>));
         services.AddSingleton<ICacheService, CacheService>();
 
         return services;

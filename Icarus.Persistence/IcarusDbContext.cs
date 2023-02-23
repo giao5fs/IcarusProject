@@ -15,6 +15,7 @@ public sealed class IcarusDbContext : DbContext, IDbContext, IUnitOfWork
     public DbSet<Member> Members { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<Permission> Permissions { get; set; }
+    public DbSet<OutboxMessageConsumer> OutboxMessageConsumers { get; set; }
 
     public IcarusDbContext(DbContextOptions<IcarusDbContext> options) : base(options)
     {

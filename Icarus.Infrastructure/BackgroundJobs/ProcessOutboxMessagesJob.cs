@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Polly;
 using Quartz;
 
 namespace Icarus.Infrastructure.BackgroundJobs;
@@ -45,9 +46,28 @@ public class ProcessOutboxMessagesJob : IJob
                     continue;
                 }
 
-                await _publisher.Publish(domainEvent);
+                try
+                {
+                    await _publisher.Publish(domainEvent);
+                    message.ProcessOnUtc = DateTime.UtcNow;
+                }
+                catch (Exception ex)
+                {
+                    message.Error = ex.ToString();
+                    message.ProcessOnUtc = DateTime.UtcNow;
+                }
 
-                message.ProcessOnUtc = DateTime.UtcNow;
+
+                //Polly.Retry.RetryPolicy policy = Policy
+                //    .Handle<Exception>()
+                //    .WaitAndRetryAsync(3, attemp => TimeSpan.FromSeconds(attemp * 30));
+
+                //PolicyResult result = await policy
+                //    .ExecuteAndCaptureAsync(() => 
+                //    _publisher.Publish(domainEvent));
+
+                //message.Error = result.FinalException?.ToString();
+                //message.ProcessOnUtc = DateTime.UtcNow;
             }
         }
         catch (Exception ex)
