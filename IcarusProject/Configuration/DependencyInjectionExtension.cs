@@ -1,4 +1,8 @@
-﻿namespace Icarus.App.Configuration;
+﻿using Icarus.Infrastructure.Idempotence;
+using MediatR;
+using System.Reflection;
+
+namespace Icarus.App.Configuration;
 
 public static class DependencyInjectionExtension
 {

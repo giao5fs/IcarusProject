@@ -3,15 +3,9 @@
 /// <summary>
 /// Represents the base class all domain events inherit from.
 /// </summary>
-public abstract class BaseDomainEvent : IDomainEvent
+public abstract record BaseDomainEvent(Guid eventId) : IDomainEvent
 {
-    public Guid EventId { get; }
+    public Guid EventId => eventId;
 
-    public DateTime OccurredOnUtc { get; }
-
-    protected internal BaseDomainEvent()
-    {
-        EventId = Guid.NewGuid();
-        OccurredOnUtc = DateTime.UtcNow;
-    }
+    public DateTime OccurredOnUtc => DateTime.UtcNow;
 }

@@ -37,22 +37,9 @@ public static class DependencyInjectionExtension
 
         services.AddScoped<IUnitOfWork>(implementation => implementation.GetRequiredService<IcarusDbContext>());
 
-        //services.AddScoped<MemberRepository>();
-        //services.AddScoped<IMemberRepository, CacheMemberRepository>();
-
-        //services.AddScoped<IMemberRepository>(sp =>
-        //{
-        //    var context = sp.GetService<IcarusDbContext>();
-        //    var cache = sp.GetService<IMemoryCache>();
-
-        //    return new CacheMemberRepository(new MemberRepository(context!), cache!);
-        //});
-
         services.AddScoped<IMemberRepository, MemberRepository>();
 
         services.Decorate<IMemberRepository, CacheMemberRepository>();
-
-        services.AddMemoryCache();
 
         services.AddSingleton<UpdateAuditableEntitiesInterceptor>();
 

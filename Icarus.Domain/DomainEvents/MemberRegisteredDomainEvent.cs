@@ -2,6 +2,8 @@
 
 namespace Icarus.Domain.DomainEvents;
 
-public sealed record MemberRegisteredDomainEvent(Guid memberId) : IDomainEvent
+public sealed record MemberRegisteredDomainEvent(
+    Guid EventId,
+    Guid MemberId) : BaseDomainEvent(EventId)
 {
 }
