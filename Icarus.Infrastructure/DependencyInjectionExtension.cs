@@ -40,26 +40,14 @@ public static class DependencyInjectionExtension
         return services;
     }
 
-    public static IServiceCollection AddInfrastructureAuthentication(this IServiceCollection services, IConfiguration _configuration)
+    public static IServiceCollection AddInfrastructureAuthentication(this IServiceCollection services)
     {
 
         services.ConfigureOptions<JwtOptionsSetup>();
 
-        //services.ConfigureOptions<JwtBearerOptionsSetup>();
+        services.ConfigureOptions<JwtBearerOptionsSetup>();
 
-        //services.AddAuthentication(JwtDefault.AuthenticationScheme).AddJwtBearer();
-
-        services.AddAuthentication(JwtDefault.AuthenticationScheme)
-            .AddJwtBearer(options => options.TokenValidationParameters = new()
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                ValidIssuer = _configuration[JwtDefault.IssuerSettingsKey],
-                ValidAudience = _configuration[JwtDefault.AudienceSettingsKey],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration[JwtDefault.SecretSettingsKey]!))
-            });
+        services.AddAuthentication(JwtDefault.AuthenticationScheme).AddJwtBearer();
 
         services.AddAuthorization();
         services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();

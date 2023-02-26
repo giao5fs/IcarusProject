@@ -4,18 +4,22 @@ using Icarus.Application;
 using Icarus.Infrastructure;
 using Icarus.Persistence;
 using MediatR;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddLogging()
+    .AddTransient<LogContextEnrichmentMiddleware>()
     .AddApplication()
     .AddPersistence()
     .AddInfrastructureBackgroundJob()
-    .AddInfrastructureAuthentication(builder.Configuration)
+    .AddInfrastructureAuthentication()
     .AddInfrastructureServices()
     .AddPresentation()
     .AddIfNotSeen();
+
+builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 var app = builder.Build();
 
@@ -25,16 +29,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.Use(async (ctx, next) =>
-{
-    Console.WriteLine("Before HttpRequest");
-    await next(ctx);
-    Console.WriteLine("After HttpRequest");
-});
+app.UseMiddleware<LogContextEnrichmentMiddleware>();
 
 app.UseCors("AllowAllOrigins");
 
-app.UseCustomExceptionHandler();
+app.UseSerilogRequestLogging();
+
+app.UseGlobalExceptionHandler();
 
 app.UseHttpsRedirection();
 

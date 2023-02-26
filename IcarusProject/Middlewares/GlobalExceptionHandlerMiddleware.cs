@@ -4,12 +4,12 @@ using System.Text.Json;
 
 namespace Icarus.App.Middlewares;
 
-public class CustomExceptionHandlerMiddleware
+public class GlobalExceptionHandlerMiddleware
 {
     private readonly RequestDelegate _next;
-    private readonly ILogger<CustomExceptionHandlerMiddleware> _logger;
+    private readonly ILogger<GlobalExceptionHandlerMiddleware> _logger;
 
-    public CustomExceptionHandlerMiddleware(RequestDelegate next, ILogger<CustomExceptionHandlerMiddleware> logger)
+    public GlobalExceptionHandlerMiddleware(RequestDelegate next, ILogger<GlobalExceptionHandlerMiddleware> logger)
     {
         _next = next;
         _logger = logger;
@@ -68,10 +68,10 @@ public class CustomExceptionHandlerMiddleware
         return context.Response.WriteAsync(result);
     }
 }
-public static class CustomExceptionHandlerMiddlewareExtensions
+public static class GlobalExceptionHandlerMiddlewareExtensions
 {
-    public static IApplicationBuilder UseCustomExceptionHandler(this IApplicationBuilder builder)
+    public static IApplicationBuilder UseGlobalExceptionHandler(this IApplicationBuilder builder)
     {
-        return builder.UseMiddleware<CustomExceptionHandlerMiddleware>();
+        return builder.UseMiddleware<GlobalExceptionHandlerMiddleware>();
     }
 }

@@ -15,7 +15,7 @@ public class PermissionAuthorizationHandler
 
     protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, PermissionRequirement requirement)
     {
-        var memberId = context.User.Claims.FirstOrDefault(
+        string? memberId = context.User.Claims.FirstOrDefault(
             x => x.Type == JwtClaimTypes.MemberId)?.Value;
 
         if (!Guid.TryParse(memberId, out Guid parsedMemberId))
